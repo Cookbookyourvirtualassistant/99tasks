@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer UI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen flex-col">
+
+  <!-- Demo content -->
+  <main class="flex-1 max-w-4xl mx-auto px-6 py-20">
+    <h1 class="text-4xl font-bold mb-4">Page Content</h1>
+    <p class="text-gray-600">Scroll down to see footer</p>
+  </main>
+
+  <!-- RESPONSIVE FOOTER -->
+  <footer class="bg-gray-900 text-gray-300">
+    <div class="max-w-6xl mx-auto px-6 py-16">
+      
+      <!-- Top section: Links + Newsletter -->
+      <div class="grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        
+        <!-- Brand + Description -->
+        <div class="md:col-span-1">
+          <h3 class="text-white font-bold text-xl mb-4">YourBrand</h3>
+          <p class="text-sm text-gray-400 mb-4">
+            Build faster with zero backend. Auth, database, and hosting in one SDK.
+          </p>
+          <!-- Social icons -->
+          <div class="flex gap-4">
+            <a href="#" class="w-9 h-9 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition">𝕏</a>
+            <a href="#" class="w-9 h-9 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition">GH</a>
+            <a href="#" class="w-9 h-9 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition">in</a>
+          </div>
+        </div>
+
+        <!-- Links Column 1 -->
+        <div>
+          <h5 class="text-white font-semibold mb-4">Product</h5>
+          <div class="flex flex-col gap-3 text-sm">
+            <a href="#features" class="hover:text-white transition">Features</a>
+            <a href="#pricing" class="hover:text-white transition">Pricing</a>
+            <a href="#changelog" class="hover:text-white transition">Changelog</a>
+            <a href="#roadmap" class="hover:text-white transition">Roadmap</a>
+          </div>
+        </div>
+
+        <!-- Links Column 2 -->
+        <div>
+          <h5 class="text-white font-semibold mb-4">Company</h5>
+          <div class="flex flex-col gap-3 text-sm">
+            <a href="#about" class="hover:text-white transition">About</a>
+            <a href="#blog" class="hover:text-white transition">Blog</a>
+            <a href="#careers" class="hover:text-white transition">Careers</a>
+            <a href="#contact" class="hover:text-white transition">Contact</a>
+          </div>
+        </div>
+
+        <!-- Links Column 3 -->
+        <div>
+          <h5 class="text-white font-semibold mb-4">Resources</h5>
+          <div class="flex flex-col gap-3 text-sm">
+            <a href="#docs" class="hover:text-white transition">Documentation</a>
+            <a href="#api" class="hover:text-white transition">API Reference</a>
+            <a href="#status" class="hover:text-white transition">Status</a>
+            <a href="#help" class="hover:text-white transition">Help Center</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter signup -->
+      <div class="border-t border-gray-800 pt-8 mb-8">
+        <div class="flex-col md:flex-row justify-between items-start md:items-center gap-4">
+          <div>
+            <h4 class="text-white font-semibold mb-2">Get updates</h4>
+            <p class="text-sm text-gray-400">No spam. Unsubscribe anytime.</p>
+          </div>
+          <div class="flex gap-2 w-full md:w-auto">
+            <input 
+              type="email" 
+              placeholder="Enter your email" 
+              class="bg-gray-800 text-white px-4 py-2 rounded-lg flex-1 md:w-64 focus:outline-none focus:ring-2 focus:ring-white/20"
+            >
+            <button class="bg-white text-gray-900 px-6 py-2 rounded-lg font-medium hover:bg-gray-100 transition whitespace-nowrap">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom section: Copyright + Legal -->
+      <div class="border-t border-gray-800 pt-8 flex-col md:flex-row justify-between items-center gap-4 text-sm">
+        <p class="text-gray-400">© 2026 YourBrand. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#privacy" class="hover:text-white transition">Privacy Policy</a>
+          <a href="#terms" class="hover:text-white transition">Terms of Service</a>
+          <a href="#cookies" class="hover:text-white transition">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
