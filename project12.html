@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- CONTACT SECTION -->
+  <section class="max-w-6xl mx-auto px-6 py-20 md:py-24" id="contact">
+    
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-4">Get in touch</h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Have a question or want to work together? We’d love to hear from you.
+      </p>
+    </div>
+
+    <div class="grid-cols-1 lg:grid-cols-3 gap-12">
+      
+      <!-- Left: Contact Info -->
+      <div class="lg:col-span-1">
+        <div class="bg-white p-8 rounded-2xl border-gray-200 mb-6">
+          <div class="w-12 h-12 bg-black rounded-xl flex items-center justify-center text-white text-2xl mb-4">📧</div>
+          <h3 class="font-bold text-lg mb-2">Email us</h3>
+          <p class="text-gray-600 text-sm mb-3">For general questions</p>
+          <a href="mailto:hello@yourbrand.com" class="text-black font-medium hover:underline">hello@yourbrand.com</a>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl border-gray-200 mb-6">
+          <div class="w-12 h-12 bg-black rounded-xl flex items-center justify-center text-white text-2xl mb-4">💬</div>
+          <h3 class="font-bold text-lg mb-2">Live chat</h3>
+          <p class="text-gray-600 text-sm mb-3">Mon-Fri, 9am-6pm IST</p>
+          <button class="text-black font-medium hover:underline">Start chat →</button>
+        </div>
+
+        <div class="bg-black text-white p-8 rounded-2xl">
+          <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-black text-2xl mb-4">📍</div>
+          <h3 class="font-bold text-lg mb-2">Office</h3>
+          <p class="text-gray-300 text-sm">
+            123 Tech Park, Koramangala<br>
+            Bengaluru, Karnataka 560034<br>
+            India
+          </p>
+        </div>
+      </div>
+
+      <!-- Right: Contact Form -->
+      <div class="lg:col-span-2">
+        <form class="bg-white p-8 md:p-12 rounded-2xl border-gray-200 space-y-6">
+          
+          <!-- Name + Email Row -->
+          <div class="grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium mb-2">Full Name *</label>
+              <input 
+                type="text" 
+                required
+                placeholder="John Doe"
+                class="w-full px-4 py-3 rounded-xl border-gray-300 focus:border-black focus:ring-2 focus:ring-black/10 outline-none transition"
+              >
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2">Email *</label>
+              <input 
+                type="email" 
+                required
+                placeholder="john@company.com"
+                class="w-full px-4 py-3 rounded-xl border-gray-300 focus:border-black focus:ring-2 focus:ring-black/10 outline-none transition"
+              >
+            </div>
+          </div>
+
+          <!-- Company + Phone Row -->
+          <div class="grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium mb-2">Company</label>
+              <input 
+                type="text" 
+                placeholder="Acme Inc"
+                class="w-full px-4 py-3 rounded-xl border-gray-300 focus:border-black focus:ring-2 focus:ring-black/10 outline-none transition"
+              >
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2">Phone</label>
+              <input 
+                type="tel" 
+                placeholder="+91 98765 43210"
+                class="w-full px-4 py-3 rounded-xl border-gray-300 focus:border-black focus:ring-2 focus:ring-black/10 outline-none transition"
+              >
+            </div>
+          </div>
+
+          <!-- Subject Dropdown -->
+          <div>
+            <label class="block text-sm font-medium mb-2">What can we help you with? *</label>
+            <select 
+              required
+              class="w-full px-4 py-3 rounded-xl border-gray-300 focus:border-black focus:ring-2 focus:ring-black/10 outline-none transition bg-white"
+            >
+              <option value="">Select a topic</option>
+              <option>General inquiry</option>
+              <option>Sales & pricing</option>
+              <option>Technical support</option>
+              <option>Partnership</option>
+              <option>Careers</option>
+            </select>
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label class="block text-sm font-medium mb-2">Message *</label>
+            <textarea 
+              rows="5"
+              required
+              placeholder="Tell us about your project or question..."
+              class="w-full px-4 py-3 rounded-xl border-gray-300 focus:border-black focus:ring-2 focus:ring-black/10 outline-none transition resize-none"
+            ></textarea>
+          </div>
+
+          <!-- Checkbox -->
+          <div class="flex items-start gap-3">
+            <input 
+              type="checkbox" 
+              required
+              id="privacy"
+              class="mt-1 w-4 h-4 rounded border-gray-300"
+            >
+            <label for="privacy" class="text-sm text-gray-600">
+              I agree to the <a href="#privacy" class="text-black underline">Privacy Policy</a> and consent to being contacted
+            </label>
+          </div>
+
+          <!-- Submit Button -->
+          <button 
+            type="submit"
+            class="w-full bg-black text-white py-4 rounded-xl font-semibold hover:bg-gray-800 transition-all hover:shadow-lg"
+          >
+            Send Message
+          </button>
+
+          <!-- Success message - hidden by default -->
+          <div id="successMsg" class="hidden bg-green-50 border-green-200 text-green-800 p-4 rounded-xl text-sm">
+            ✓ Thanks! We’ll get back to you within 24 hours.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Simple form submission demo
+    document.querySelector('form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('successMsg').classList.remove('hidden');
+      e.target.reset();
+      setTimeout(() => {
+        document.getElementById('successMsg').classList.add('hidden');
+      }, 5000);
+    });
+  </script>
+
+</body>
+</html>
