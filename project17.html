@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel - YourBrand</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <div class="flex h-screen overflow-hidden">
+    
+    <!-- Sidebar -->
+    <aside class="hidden lg:flex lg:flex-col w-64 bg-gray-900 text-white">
+      <div class="p-6 border-b border-white/10">
+        <h1 class="font-bold text-xl">Admin Panel</h1>
+        <p class="text-xs text-gray-400 mt-1">YourBrand</p>
+      </div>
+      
+      <nav class="flex-1 p-4 space-y-1">
+        <a href="#" class="flex items-center gap-3 px-4 py-3 bg-white/10 rounded-lg">
+          <span>📊</span> Overview
+        </a>
+        <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-white/5 rounded-lg transition">
+          <span>👥</span> Users
+        </a>
+        <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-white/5 rounded-lg transition">
+          <span>💳</span> Subscriptions
+        </a>
+        <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-white/5 rounded-lg transition">
+          <span>📦</span> Products
+        </a>
+        <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-white/5 rounded-lg transition">
+          <span>📈</span> Analytics
+        </a>
+        <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-white/5 rounded-lg transition">
+          <span>⚙️</span> Settings
+        </a>
+      </nav>
+
+      <div class="p-4 border-t border-white/10">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-gradient-to-br from-red-400 to-pink-500 rounded-full flex items-center justify-center font-bold">A</div>
+          <div class="flex-1">
+            <p class="text-sm font-medium">Admin</p>
+            <p class="text-xs text-gray-400">Super Admin</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <div class="flex-1 flex-col overflow-hidden">
+      
+      <!-- Topbar -->
+      <header class="bg-white border-b border-gray-200 px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <button class="lg:hidden">
+              <span class="text-2xl">☰</span>
+            </button>
+            <h2 class="text-2xl font-bold">User Management</h2>
+          </div>
+          
+          <div class="flex items-center gap-3">
+            <button class="p-2 hover:bg-gray-100 rounded-lg">
+              <span class="text-xl">🔍</span>
+            </button>
+            <button class="p-2 hover:bg-gray-100 rounded-lg relative">
+              <span class="text-xl">🔔</span>
+              <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+            </button>
+            <div class="w-9 h-9 bg-gradient-to-br from-red-400 to-pink-500 rounded-full flex items-center justify-center text-white font-bold">A</div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <main class="flex-1 overflow-y-auto p-6 md:p-8">
+        
+        <!-- Stats + Actions -->
+        <div class="flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+          <div class="grid-cols-2 md:grid-cols-4 gap-4 flex-1">
+            <div class="bg-white p-4 rounded-xl border-gray-200">
+              <p class="text-sm text-gray-600">Total Users</p>
+              <p class="text-2xl font-bold mt-1">12,847</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl border-gray-200">
+              <p class="text-sm text-gray-600">Active Today</p>
+              <p class="text-2xl font-bold mt-1">3,291</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl border-gray-200">
+              <p class="text-sm text-gray-600">New This Week</p>
+              <p class="text-2xl font-bold mt-1">482</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl border-gray-200">
+              <p class="text-sm text-gray-600">Churn Rate</p>
+              <p class="text-2xl font-bold mt-1">2.4%</p>
+            </div>
+          </div>
+          
+          <button class="bg-black text-white px-6 py-3 rounded-xl font-medium hover:bg-gray-800 transition whitespace-nowrap">
+            + Add User
+          </button>
+        </div>
+
+        <!-- Filters -->
+        <div class="bg-white p-4 rounded-xl border-gray-200 mb-6">
+          <div class="grid-cols-1 md:grid-cols-4 gap-4">
+            <input 
+              type="text" 
+              placeholder="Search users..."
+              class="px-4 py-2 rounded-lg border-gray-300 focus:border-black outline-none"
+            >
+            <select class="px-4 py-2 rounded-lg border-gray-300 focus:border-black outline-none">
+              <option>All Plans</option>
+              <option>Free</option>
+              <option>Pro</option>
+              <option>Enterprise</option>
+            </select>
+            <select class="px-4 py-2 rounded-lg border-gray-300 focus:border-black outline-none">
+              <option>All Status</option>
+              <option>Active</option>
+              <option>Suspended</option>
+              <option>Pending</option>
+            </select>
+            <button class="border-gray-300 px-4 py-2 rounded-lg hover:border-gray-400">Export CSV</button>
+          </div>
+        </div>
+
+        <!-- Users Table -->
+        <div class="bg-white rounded-2xl border-gray-200 overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead class="bg-gray-50 text-left text-sm font-medium text-gray-600">
+                <tr>
+                  <th class="px-6 py-4">
+                    <input type="checkbox" class="rounded border-gray-300">
+                  </th>
+                  <th class="px-6 py-4">User</th>
+                  <th class="px-6 py-4">Email</th>
+                  <th class="px-6 py-4">Plan</th>
+                  <th class="px-6 py-4">Status</th>
+                  <th class="px-6 py-4">Joined</th>
+                  <th class="px-6 py-4">Actions</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                
+                <!-- Row 1 -->
+                <tr class="hover:bg-gray-50">
+                  <td class="px-6 py-4">
+                    <input type="checkbox" class="rounded border-gray-300">
+                  </td>
+                  <td class="px-6 py-4">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-medium">SC</div>
+                      <div>
+                        <p class="font-medium">Sarah Chen</p>
+                        <p class="text-xs text-gray-500">ID: #2847</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-gray-600">sarah@startupxyz.com</td>
+                  <td class="px-6 py-4">
+                    <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">Pro</span>
+                  </td>
+                  <td class="px-6 py-4">
+                    <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Active</span>
+                  </td>
+                  <td class="px-6 py-4 text-gray-600 text-sm">Jan 12, 2026</td>
+                  <td class="px-6 py-4">
+                    <div class="flex gap-2">
+                      <button class="text-sm text-black hover:underline">Edit</button>
+                      <button class="text-sm text-red-600 hover:underline">Suspend</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 2 -->
+                <tr class="hover:bg-gray-50">
+                  <td class="px-6 py-4">
+                    <input type="checkbox" class="rounded border-gray-300">
+                  </td>
+                  <td class="px-6 py-4">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-medium">MK</div>
+                      <div>
+                        <p class="font-medium">Marcus Kim</p>
+                        <p class="text-xs text-gray-500">ID: #1923</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-gray-600">marcus@devtools.com</td>
+                  <td class="px-6 py-4">
+                    <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">Pro</span>
+                  </td>
+                  <td class="px-6 py-4">
+                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs font-medium rounded-full">Pending</span>
+                  </td>
+                  <td class="px-6 py-4 text-gray-600 text-sm">Mar 3, 2026</td>
+                  <td class="px-6 py-4">
+                    <div class="flex gap-2">
+                      <button class="text-sm text-black hover:underline">Edit</button>
+                      <button class="text-sm text-red-600 hover:underline">Suspend</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 3 -->
+                <tr class="hover:bg-gray-50">
+                  <td class="px-6 py-4">
+                    <input type="checkbox" class="rounded border-gray-300">
+                  </td>
+                  <td class="px-6 py-4">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-medium">AP</div>
+                      <div>
+                        <p class="font-medium">Aisha Patel</p>
+                        <p class="text-xs text-gray-500">ID: #3847</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-gray-600">aisha@fintechco.com</td>
+                  <td class="px-6 py-4">
+                    <span class="px-3 py-1 bg-black text-white text-xs font-medium rounded-full">Enterprise</span>
+                  </td>
+                  <td class="px-6 py-4">
+                    <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Active</span>
+                  </td>
+                  <td class="px-6 py-4 text-gray-600 text-sm">Feb 28, 2026</td>
+                  <td class="px-6 py-4">
+                    <div class="flex gap-2">
+                      <button class="text-sm text-black hover:underline">Edit</button>
+                      <button class="text-sm text-red-600 hover:underline">Suspend</button>
+                    </div>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Pagination -->
+          <div class="px-6 py-4 border-t border-gray-200 flex items-center justify-between">
+            <p class="text-sm text-gray-600">Showing 1-10 of 12,847 users</p>
+            <div class="flex gap-2">
+              <button class="px-4 py-2 border-gray-300 rounded-lg text-sm hover:bg-gray-50">Previous</button>
+              <button class="px-4 py-2 bg-black text-white rounded-lg text-sm">1</button>
+              <button class="px-4 py-2 border-gray-300 rounded-lg text-sm hover:bg-gray-50">2</button>
+              <button class="px-4 py-2 border-gray-300 rounded-lg text-sm hover:bg-gray-50">3</button>
+              <button class="px-4 py-2 border-gray-300 rounded-lg text-sm hover:bg-gray-50">Next</button>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>
