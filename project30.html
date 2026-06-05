@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediCare Plus - Healthcare Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- TOP BAR - Emergency + Contact -->
+  <div class="bg-blue-900 text-white text-sm py-2">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <span>🚨 Emergency: 108</span>
+        <span class="hidden md:block">•</span>
+        <span class="hidden md:block">📞 24/7 Helpline: +91 98765 43210</span>
+      </div>
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="#" class="hover:underline">Patient Portal</a>
+        <a href="#" class="hover:underline">Careers</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <div class="flex items-center gap-8">
+          <div class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white text-xl">+</div>
+            <h1 class="font-bold text-2xl text-blue-900">MediCare Plus</h1>
+          </div>
+          <nav class="hidden lg:flex gap-6 font-medium">
+            <a href="#" class="text-blue-900 border-b-2 border-blue-600 pb-1">Home</a>
+            <a href="#" class="text-gray-700 hover:text-blue-900">Services</a>
+            <a href="#" class="text-gray-700 hover:text-blue-900">Doctors</a>
+            <a href="#" class="text-gray-700 hover:text-blue-900">Departments</a>
+            <a href="#" class="text-gray-700 hover:text-blue-900">About</a>
+          </nav>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="hidden md:block border-2 border-blue-600 text-blue-600 px-5 py-2.5 rounded-lg font-medium hover:bg-blue-50">Patient Login</button>
+          <button class="bg-blue-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-blue-700">Book Appointment</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO + APPOINTMENT FORM -->
+  <section class="bg-gradient-to-br from-blue-50 to-teal-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+      <div class="grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <!-- Left: Content -->
+        <div>
+          <div class="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+            Trusted by 50,000+ Patients
+          </div>
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            Your Health is<br>Our Priority
+          </h2>
+          <p class="text-lg text-gray-600 mb-8">
+            Advanced medical care with experienced doctors, modern equipment, and compassionate service. Available 24/7 for your health needs.
+          </p>
+          
+          <!-- Quick Stats -->
+          <div class="grid-cols-3 gap-6 mb-8">
+            <div>
+              <p class="text-3xl font-bold text-blue-600">150+</p>
+              <p class="text-sm text-gray-600">Expert Doctors</p>
+            </div>
+            <div>
+              <p class="text-3xl font-bold text-blue-600">25+</p>
+              <p class="text-sm text-gray-600">Specialties</p>
+            </div>
+            <div>
+              <p class="text-3xl font-bold text-blue-600">24/7</p>
+              <p class="text-sm text-gray-600">Emergency Care</p>
+            </div>
+          </div>
+
+          <div class="flex-col sm:flex-row gap-4">
+            <button class="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700">Find a Doctor</button>
+            <button class="border-2 border-gray-300 px-8 py-4 rounded-xl font-semibold hover:border-gray-400">Our Services</button>
+          </div>
+        </div>
+
+        <!-- Right: Appointment Form Card -->
+        <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-10">
+          <h3 class="text-2xl font-bold mb-6">Book an Appointment</h3>
+          <form class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium mb-2">Full Name</label>
+              <input type="text" placeholder="Enter your name" class="w-full px-4 py-3 rounded-xl border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 outline-none">
+            </div>
+            
+            <div class="grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium mb-2">Phone</label>
+                <input type="tel" placeholder="+91 98765..." class="w-full px-4 py-3 rounded-xl border-gray-300 focus:border-blue-600 outline-none">
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">Age</label>
+                <input type="number" placeholder="Age" class="w-full px-4 py-3 rounded-xl border-gray-300 focus:border-blue-600 outline-none">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Department</label>
+              <select class="w-full px-4 py-3 rounded-xl border-gray-300 focus:border-blue-600 outline-none">
+                <option>Select Department</option>
+                <option>Cardiology</option>
+                <option>Neurology</option>
+                <option>Orthopedics</option>
+                <option>Pediatrics</option>
+                <option>General Medicine</option>
+              </select>
+            </div>
+
+            <div class="grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium mb-2">Date</label>
+                <input type="date" class="w-full px-4 py-3 rounded-xl border-gray-300 focus:border-blue-600 outline-none">
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">Time</label>
+                <input type="time" class="w-full px-4 py-3 rounded-xl border-gray-300 focus:border-blue-600 outline-none">
+              </div>
+            </div>
+
+            <button type="submit" class="w-full bg-blue-600 text-white py-4 rounded-xl font-semibold hover:bg-blue-700 transition">
+              Book Now
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="text-center mb-12">
+      <h3 class="text-3xl md:text-4xl font-bold mb-4">Our Medical Services</h3>
+      <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive healthcare services with state-of-the-art technology and expert medical professionals</p>
+    </div>
+
+    <div class="grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <div class="bg-white p-8 rounded-2xl border-gray-200 hover:border-blue-300 hover:shadow-lg transition group">
+        <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-200 transition">
+          <span class="text-3xl">❤️</span>
+        </div>
+        <h4 class="font-bold text-xl mb-3">Cardiology</h4>
+        <p class="text-gray-600 text-sm mb-4">Advanced heart care with ECG, Echo, and cardiac surgery facilities.</p>
+        <a href="#" class="text-blue-600 font-medium text-sm hover:underline">Learn More →</a>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl border-gray-200 hover:border-blue-300 hover:shadow-lg transition group">
+        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-200 transition">
+          <span class="text-3xl">🧠</span>
+        </div>
+        <h4 class="font-bold text-xl mb-3">Neurology</h4>
+        <p class="text-gray-600 text-sm mb-4">Brain & nervous system treatment with MRI and CT scan facilities.</p>
+        <a href="#" class="text-blue-600 font-medium text-sm hover:underline">Learn More →</a>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl border-gray-200 hover:border-blue-300 hover:shadow-lg transition group">
+        <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-200 transition">
+          <span class="text-3xl">🦴</span>
+        </div>
+        <h4 class="font-bold text-xl mb-3">Orthopedics</h4>
+        <p class="text-gray-600 text-sm mb-4">Bone & joint care, joint replacement, and sports injury treatment.</p>
+        <a href="#" class="text-blue-600 font-medium text-sm hover:underline">Learn More →</a>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl border-gray-200 hover:border-blue-300 hover:shadow-lg transition group">
+        <div class="w-16 h-16 bg-pink-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pink-200 transition">
+          <span class="text-3xl">👶</span>
+        </div>
+        <h4 class="font-bold text-xl mb-3">Pediatrics</h4>
+        <p class="text-gray-600 text-sm mb-4">Specialized care for children with child-friendly environment.</p>
+        <a href="#" class="text-blue-600 font-medium text-sm hover:underline">Learn More →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR DOCTORS -->
+  <section class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between mb-10">
+        <div>
+          <h3 class="text-3xl md:text-4xl font-bold mb-2">Meet Our Specialists</h3>
+          <p class="text-gray-600">Board-certified doctors with 15+ years of experience</p>
+        </div>
+        <a href="#" class="hidden md:block text-blue-600 font-semibold hover:underline">View All →</a>
+      </div>
+
+      <div class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        
+        <!-- Doctor Card 1 -->
+        <div class="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-xl transition group">
+          <div class="aspect-square bg-gray-200 overflow-hidden">
+            <img src="https://i.pravatar.cc/400?u=dr1" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+          </div>
+          <div class="p-6">
+            <h4 class="font-bold text-lg mb-1">Dr. Rajesh Kumar</h4>
+            <p class="text-blue-600 text-sm font-medium mb-2">Cardiologist</p>
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-3">
+              <span>⭐ 4.9</span>
+              <span>•</span>
+              <span>18 years exp</span>
+            </div>
+            <p class="text-xs text-gray-500 mb-4">MBBS, MD, DM Cardiology</p>
+            <button class="w-full bg-blue-600 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-blue-700">
+              Book Appointment
+            </button>
+          </div>
+        </div>
+
+        <!-- Doctor Card 2 -->
+        <div class="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-xl transition group">
+          <div class="aspect-square bg-gray-200 overflow-hidden">
+            <img src="https://i.pravatar.cc/400?u=dr2" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+          </div>
+          <div class="p-6">
+            <h4 class="font-bold text-lg mb-1">Dr. Priya Sharma</h4>
+            <p class="text-blue-600 text-sm font-medium mb-2">Neurologist</p>
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-3">
+              <span>⭐ 4.8</span>
+              <span>•</span>
+              <span>15 years exp</span>
+            </div>
+            <p class="text-xs text-gray-500 mb-4">MBBS, MD, DM Neurology</p>
+            <button class="w-full bg-blue-600 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-blue-700">
+              Book Appointment
+            </button>
+          </div>
+        </div>
+
+        <!-- Doctor Card 3 -->
+        <div class="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-xl transition group">
+          <div class="aspect-square bg-gray-200 rounded-t-2xl overflow-hidden">
+            <img src="https://i.pravatar.cc/400?u=dr3" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+          </div>
+          <div class="p-6">
+            <h4 class="font-bold text-lg mb-1">Dr. Amit Verma</h4>
+            <p class="text-blue-600 text-sm font-medium mb-2">Orthopedic Surgeon</p>
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-3">
+              <span>⭐ 4.9</span>
+              <span>•</span>
+              <span>20 years exp</span>
+            </div>
+            <p class="text-xs text-gray-500 mb-4">MBBS, MS Orthopedics</p>
+            <button class="w-full bg-blue-600 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-blue-700">
+              Book Appointment
+            </button>
+          </div>
+        </div>
+
+        <!-- Doctor Card 4 -->
+        <div class="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-xl transition group">
+          <div class="aspect-square bg-gray-200 overflow-hidden">
+            <img src="https://i.pravatar.cc/400?u=dr4" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+          </div>
+          <div class="p-6">
+            <h4 class="font-bold text-lg mb-1">Dr. Sneha Reddy</h4>
+            <p class="text-blue-600 text-sm font-medium mb-2">Pediatrician</p>
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-3">
+              <span>⭐ 4.9</span>
+              <span>•</span>
+              <span>12 years exp</span>
+            </div>
+            <p class="text-xs text-gray-500 mb-4">MBBS, MD Pediatrics</p>
+            <button class="w-full bg-blue-600 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-blue-700">
+              Book Appointment
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-3xl md:text-4xl font-bold mb-6">Why Choose MediCare Plus?</h3>
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl">🏥</span>
+              </div>
+              <div>
+                <h4 class="font-bold mb-2">Modern Infrastructure</h4>
+                <p class="text-gray-600">500+ bed hospital with ICU, operation theaters, and advanced diagnostic labs.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl">👨‍⚕️</span>
+              </div>
+              <div>
+                <h4 class="font-bold mb-2">Expert Medical Team</h4>
+                <p class="text-gray-600">150+ qualified doctors and 400+ trained nursing staff available 24/7.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl">⚡</span>
+              </div>
+              <div>
+                <h4 class="font-bold mb-2">Emergency Services</h4>
+                <p class="text-gray-600">24/7 emergency care with ambulance service and trauma center.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="https://via.placeholder.com/600x500" class="rounded-3xl w-full" alt="Hospital">
+          <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl">
+            <p class="text-4xl font-bold text-blue-600 mb-1">98%</p>
+            <p class="text-sm text-gray-600">Patient Satisfaction</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="bg-blue-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h3 class="text-3xl md:text-4xl font-bold mb-4">Patient Testimonials</h3>
+        <p class="text-gray-600">Real stories from our patients</p>
+      </div>
+      <div class="grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="bg-white p-6 rounded-2xl">
+          <div class="flex text-yellow-400 mb-4">★★★</div>
+          <p class="text-gray-700 mb-4">"Excellent care and treatment. Dr. Rajesh was very professional and the staff was supportive throughout my recovery."</p>
+          <div class="flex items-center gap-3">
+            <img src="https://i.pravatar.cc/50?u=patient1" class="w-10 h-10 rounded-full">
+            <div>
+              <p class="font-medium text-sm">Rahul Mehta</p>
+              <p class="text-xs text-gray-500">Cardiology Patient</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl">
+          <div class="flex text-yellow-400 mb-4">★★★</div>
+          <p class="text-gray-700 mb-4">"Best pediatric care for my child. The doctors explained everything clearly and made my child comfortable."</p>
+          <div class="flex items-center gap-3">
+            <img src="https://i.pravatar.cc/50?u=patient2" class="w-10 h-10 rounded-full">
+            <div>
+              <p class="font-medium text-sm">Anjali Gupta</p>
+              <p class="text-xs text-gray-500">Pediatrics Patient</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl">
+          <div class="flex text-yellow-400 mb-4">★★★</div>
+          <p class="text-gray-700 mb-4">"Emergency service was quick and efficient. Thank you MediCare Plus for saving my father's life."</p>
+          <div class="flex items-center gap-3">
+            <img src="https://i.pravatar.cc/50?u=patient3" class="w-10 h-10 rounded-full">
+            <div>
+              <p class="font-medium text-sm">Suresh Kumar</p>
+              <p class="text-xs text-gray-500">Emergency Care</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="bg-blue-600 py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+      <h3 class="text-3xl md:text-4xl font-bold mb-4">Need Medical Help?</h3>
+      <p class="text-lg mb-8 text-white/90">Book your appointment online or call our 24/7 helpline</p>
+      <div class="flex-col sm:flex-row gap-4 justify-center">
+        <button class="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100">Book Online</button>
+        <button class="border-2 border-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10">Call: 108</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white">+</div>
+            <h4 class="font-bold text-lg">MediCare Plus</h4>
+          </div>
+          <p class="text-gray-400 text-sm">Committed to providing quality healthcare for all.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <div class="space-y-2 text-sm text-gray-400">
+            <a href="#" class="block hover:text-white">Find a Doctor</a>
+            <a href="#" class="block hover:text-white">Book Appointment</a>
+            <a href="#" class="block hover:text-white">Patient Portal</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Services</h4>
+          <div class="space-y-2 text-sm text-gray-400">
+            <a href="#" class="block hover:text-white">Emergency Care</a>
+            <a href="#" class="block hover:text-white">Diagnostics</a>
+            <a href="#" class="block hover:text-white">Pharmacy</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contact</h4>
+          <div class="space-y-2 text-sm text-gray-400">
+            <p>123 Health Street, Mumbai</p>
+            <p>Emergency: 108</p>
+            <p>info@medicareplus.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+        © 2026 MediCare Plus. All rights reserved. | Privacy Policy | Terms of Service
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
