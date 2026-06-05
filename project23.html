@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopHub - Premium Products</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- HEADER -->
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        
+        <!-- Logo -->
+        <div class="flex items-center gap-8">
+          <h1 class="font-bold text-2xl">ShopHub</h1>
+          
+          <!-- Desktop Nav -->
+          <nav class="hidden lg:flex gap-6">
+            <a href="#" class="text-gray-700 hover:text-black">New Arrivals</a>
+            <a href="#" class="text-gray-700 hover:text-black">Men</a>
+            <a href="#" class="text-gray-700 hover:text-black">Women</a>
+            <a href="#" class="text-gray-700 hover:text-black">Electronics</a>
+          </nav>
+        </div>
+
+        <!-- Search + Icons -->
+        <div class="flex items-center gap-4 md:gap-6">
+          <div class="hidden md:flex relative">
+            <input 
+              type="text" 
+              placeholder="Search products..."
+              class="w-64 lg:w-80 pl-10 pr-4 py-2.5 rounded-full border-gray-300 bg-gray-50 focus:bg-white focus:border-black outline-none"
+            >
+            <span class="absolute left-3 top-2.5 text-gray-400">🔍</span>
+          </div>
+          
+          <button class="relative p-2">
+            <span class="text-2xl">♡</span>
+          </button>
+          <button class="relative p-2">
+            <span class="text-2xl">🛒</span>
+            <span class="absolute -top-1 -right-1 w-5 h-5 bg-black text-white text-xs rounded-full flex items-center justify-center">3</span>
+          </button>
+          <button class="hidden md:block w-9 h-9 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full"></button>
+          
+          <!-- Mobile Menu -->
+          <button class="lg:hidden p-2">
+            <span class="text-2xl">☰</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="bg-black text-white text-center py-2 text-sm">
+    Free shipping on orders over $50 • Use code: FREESHIP
+  </div>
+
+  <!-- HERO BANNER -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    <div class="bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl p-8 md:p-16 lg:p-20 text-white relative overflow-hidden">
+      <div class="absolute w-96 h-96 bg-white/10 rounded-full -top-48 -right-48"></div>
+      <div class="relative z-10 max-w-2xl">
+        <p class="text-sm font-medium mb-4 bg-white/20 inline-block px-4 py-1 rounded-full">New Collection 2026</p>
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          Summer Essentials<br>Up to 40% Off
+        </h2>
+        <p class="text-lg md:text-xl mb-8 text-white/90">
+          Discover the latest trends in fashion and lifestyle. Limited time offer.
+        </p>
+        <div class="flex-col sm:flex-row gap-4">
+          <button class="bg-white text-black px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition">Shop Now</button>
+          <button class="border-2 border-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition">View Collection</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h3 class="text-2xl md:text-3xl font-bold mb-8 text-center">Shop by Category</h3>
+    <div class="grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
+      
+      <div class="group cursor-pointer">
+        <div class="aspect-square bg-gradient-to-br from-pink-200 to-pink-300 rounded-2xl mb-3 overflow-hidden">
+          <div class="w-full h-full flex items-center justify-center text-5xl group-hover:scale-110 transition">👗</div>
+        </div>
+        <p class="text-center font-medium">Women</p>
+      </div>
+
+      <div class="group cursor-pointer">
+        <div class="aspect-square bg-gradient-to-br from-blue-200 to-blue-300 rounded-2xl mb-3 overflow-hidden">
+          <div class="w-full h-full flex items-center justify-center text-5xl group-hover:scale-110 transition">👔</div>
+        </div>
+        <p class="text-center font-medium">Men</p>
+      </div>
+
+      <div class="group cursor-pointer">
+        <div class="aspect-square bg-gradient-to-br from-green-200 to-green-300 rounded-2xl mb-3 overflow-hidden">
+          <div class="w-full h-full flex items-center justify-center text-5xl group-hover:scale-110 transition">📱</div>
+        </div>
+        <p class="text-center font-medium">Electronics</p>
+      </div>
+
+      <div class="group cursor-pointer">
+        <div class="aspect-square bg-gradient-to-br from-yellow-200 to-yellow-300 rounded-2xl mb-3 overflow-hidden">
+          <div class="w-full h-full flex items-center justify-center text-5xl group-hover:scale-110 transition">🏠</div>
+        </div>
+        <p class="text-center font-medium">Home</p>
+      </div>
+
+      <div class="group cursor-pointer">
+        <div class="aspect-square bg-gradient-to-br from-purple-200 to-purple-300 rounded-2xl mb-3 overflow-hidden">
+          <div class="w-full h-full flex items-center justify-center text-5xl group-hover:scale-110 transition">👟</div>
+        </div>
+        <p class="text-center font-medium">Footwear</p>
+      </div>
+
+      <div class="group cursor-pointer">
+        <div class="aspect-square bg-gradient-to-br from-orange-200 to-orange-300 rounded-2xl mb-3 overflow-hidden">
+          <div class="w-full h-full flex items-center justify-center text-5xl group-hover:scale-110 transition">💄</div>
+        </div>
+        <p class="text-center font-medium">Beauty</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLASH SALE -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="flex items-center justify-between mb-8">
+      <div class="flex items-center gap-4">
+        <h3 class="text-2xl md:text-3xl font-bold">Flash Sale</h3>
+        <span class="bg-red-500 text-white text-sm font-bold px-4 py-1 rounded-full">Ends in 12:45:30</span>
+      </div>
+      <a href="#" class="text-black font-medium hover:underline">View All →</a>
+    </div>
+
+    <!-- Product Grid - 2 cols mobile, 4 cols tablet, 5 cols desktop -->
+    <div class="grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
+      
+      <!-- Product Card 1 -->
+      <div class="bg-white rounded-2xl border-gray-200 overflow-hidden group hover:shadow-xl transition">
+        <div class="relative aspect-square bg-gray-100">
+          <div class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">-40%</div>
+          <div class="w-full h-full flex items-center justify-center text-6xl">👟</div>
+          <button class="absolute bottom-3 right-3 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            🛒
+          </button>
+        </div>
+        <div class="p-4">
+          <p class="text-sm text-gray-500 mb-1">Nike</p>
+          <h4 class="font-medium mb-2 line-clamp-2">Air Max 270 Running Shoes</h4>
+          <div class="flex items-center gap-2 mb-2">
+            <div class="flex text-yellow-400 text-sm">★★★</div>
+            <span class="text-xs text-gray-500">(128)</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-lg">$89.99</span>
+            <span class="text-sm text-gray-400 line-through">$149.99</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="bg-white rounded-2xl border-gray-200 overflow-hidden group hover:shadow-xl transition">
+        <div class="relative aspect-square bg-gray-100">
+          <div class="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">New</div>
+          <div class="w-full h-full flex items-center justify-center text-6xl">📱</div>
+          <button class="absolute bottom-3 right-3 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            🛒
+          </button>
+        </div>
+        <div class="p-4">
+          <p class="text-sm text-gray-500 mb-1">Apple</p>
+          <h4 class="font-medium mb-2 line-clamp-2">AirPods Pro 2nd Gen</h4>
+          <div class="flex items-center gap-2 mb-2">
+            <div class="flex text-yellow-400 text-sm">★★★</div>
+            <span class="text-xs text-gray-500">(2.4k)</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-lg">$249.00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="bg-white rounded-2xl border-gray-200 overflow-hidden group hover:shadow-xl transition">
+        <div class="relative aspect-square bg-gray-100">
+          <div class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">-25%</div>
+          <div class="w-full h-full flex items-center justify-center text-6xl">⌚</div>
+          <button class="absolute bottom-3 right-3 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            🛒
+          </button>
+        </div>
+        <div class="p-4">
+          <p class="text-sm text-gray-500 mb-1">Fossil</p>
+          <h4 class="font-medium mb-2 line-clamp-2">Gen 6 Smartwatch</h4>
+          <div class="flex items-center gap-2 mb-2">
+            <div class="flex text-yellow-400 text-sm">★★☆</div>
+            <span class="text-xs text-gray-500">(892)</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-lg">$224.99</span>
+            <span class="text-sm text-gray-400 line-through">$299.99</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 4 -->
+      <div class="bg-white rounded-2xl border-gray-200 overflow-hidden group hover:shadow-xl transition">
+        <div class="relative aspect-square bg-gray-100">
+          <div class="w-full h-full flex items-center justify-center text-6xl">🎒</div>
+          <button class="absolute bottom-3 right-3 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            🛒
+          </button>
+        </div>
+        <div class="p-4">
+          <p class="text-sm text-gray-500 mb-1">Herschel</p>
+          <h4 class="font-medium mb-2 line-clamp-2">Classic Backpack XL</h4>
+          <div class="flex items-center gap-2 mb-2">
+            <div class="flex text-yellow-400 text-sm">★★★</div>
+            <span class="text-xs text-gray-500">(1.2k)</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-lg">$59.00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 5 - Hidden on mobile -->
+      <div class="hidden lg:block bg-white rounded-2xl border-gray-200 overflow-hidden group hover:shadow-xl transition">
+        <div class="relative aspect-square bg-gray-100">
+          <div class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">-30%</div>
+          <div class="w-full h-full flex items-center justify-center text-6xl">🕶️</div>
+          <button class="absolute bottom-3 right-3 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            🛒
+          </button>
+        </div>
+        <div class="p-4">
+          <p class="text-sm text-gray-500 mb-1">Ray-Ban</p>
+          <h4 class="font-medium mb-2 line-clamp-2">Aviator Classic Sunglasses</h4>
+          <div class="flex items-center gap-2 mb-2">
+            <div class="flex text-yellow-400 text-sm">★★★</div>
+            <span class="text-xs text-gray-500">(3.1k)</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-lg">$139.99</span>
+            <span class="text-sm text-gray-400 line-through">$199.99</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER 2 COLS -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-r from-pink-500 to-rose-500 rounded-3xl p-8 md:p-12 text-white">
+        <h3 class="text-3xl font-bold mb-4">Women's Collection</h3>
+        <p class="mb-6 text-white/90">Trending styles for every occasion</p>
+        <button class="bg-white text-pink-600 px-6 py-3 rounded-xl font-semibold hover:bg-gray-100">Shop Women</button>
+      </div>
+      <div class="bg-gradient-to-r from-blue-500 to-indigo-500 rounded-3xl p-8 md:p-12 text-white">
+        <h3 class="text-3xl font-bold mb-4">Men's Collection</h3>
+        <p class="mb-6 text-white/90">Modern essentials for him</p>
+        <button class="bg-white text-blue-600 px-6 py-3 rounded-xl font-semibold hover:bg-gray-100">Shop Men</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="bg-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="text-4xl mb-3">🚚</div>
+          <h4 class="font-bold mb-1">Free Shipping</h4>
+          <p class="text-sm text-gray-600">On orders over $50</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl mb-3">↩️</div>
+          <h4 class="font-bold mb-1">Easy Returns</h4>
+          <p class="text-sm text-gray-600">30-day return policy</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl mb-3">🔒</div>
+          <h4 class="font-bold mb-1">Secure Payment</h4>
+          <p class="text-sm text-gray-600">SSL encrypted checkout</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl mb-3">💬</div>
+          <h4 class="font-bold mb-1">24/7 Support</h4>
+          <p class="text-sm text-gray-600">Dedicated support team</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+        <div class="col-span-2 lg:col-span-1">
+          <h3 class="font-bold text-xl mb-4">ShopHub</h3>
+          <p class="text-gray-400 text-sm">Premium products, delivered fast.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Shop</h4>
+          <div class="space-y-2 text-sm text-gray-400">
+            <a href="#" class="block hover:text-white">New Arrivals</a>
+            <a href="#" class="block hover:text-white">Best Sellers</a>
+            <a href="#" class="block hover:text-white">Sale</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Support</h4>
+          <div class="space-y-2 text-sm text-gray-400">
+            <a href="#" class="block hover:text-white">Contact Us</a>
+            <a href="#" class="block hover:text-white">FAQs</a>
+            <a href="#" class="block hover:text-white">Shipping</a>
+          </div>
+        </div>
+        <div class="col-span-2 md:col-span-1">
+          <h4 class="font-semibold mb-4">Newsletter</h4>
+          <div class="flex gap-2">
+            <input type="email" placeholder="Your email" class="flex-1 px-4 py-2 rounded-lg bg-gray-800 border-gray-700 text-sm focus:outline-none">
+            <button class="bg-white text-black px-4 py-2 rounded-lg font-medium text-sm">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+        © 2026 ShopHub. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
