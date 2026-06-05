@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desktop Layout</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <div class="flex h-screen overflow-hidden">
+    
+    <!-- WIDE SIDEBAR - 280px for desktop -->
+    <aside class="hidden lg:flex lg:flex-col w-72 bg-gray-900 text-white">
+      <div class="p-8 border-b border-white/10">
+        <h1 class="font-bold text-2xl">YourBrand</h1>
+        <p class="text-sm text-gray-400 mt-2">Enterprise Dashboard</p>
+      </div>
+      
+      <nav class="flex-1 p-6 space-y-2">
+        <a href="#" class="flex items-center gap-4 px-5 py-4 bg-white/10 rounded-xl font-medium">
+          <span class="text-xl">📊</span> Overview
+        </a>
+        <a href="#" class="flex items-center gap-4 px-5 py-4 hover:bg-white/5 rounded-xl transition">
+          <span class="text-xl">👥</span> Users <span class="ml-auto text-xs bg-white/20 px-2 py-1 rounded">12.8k</span>
+        </a>
+        <a href="#" class="flex items-center gap-4 px-5 py-4 hover:bg-white/5 rounded-xl transition">
+          <span class="text-xl">💳</span> Billing
+        </a>
+        <a href="#" class="flex items-center gap-4 px-5 py-4 hover:bg-white/5 rounded-xl transition">
+          <span class="text-xl">📈</span> Analytics
+        </a>
+        <a href="#" class="flex items-center gap-4 px-5 py-4 hover:bg-white/5 rounded-xl transition">
+          <span class="text-xl">🔑</span> API Keys
+        </a>
+        <a href="#" class="flex items-center gap-4 px-5 py-4 hover:bg-white/5 rounded-xl transition">
+          <span class="text-xl">⚙️</span> Settings
+        </a>
+      </nav>
+
+      <div class="p-6 border-t border-white/10">
+        <div class="bg-white/5 p-4 rounded-xl mb-4">
+          <p class="text-xs text-gray-400 mb-1">Storage Used</p>
+          <div class="h-2 bg-white/20 rounded-full overflow-hidden">
+            <div class="h-full bg-white w-3/4"></div>
+          </div>
+          <p class="text-xs text-gray-400 mt-2">750 GB of 1 TB</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center font-bold text-lg">SC</div>
+          <div class="flex-1">
+            <p class="font-medium">Sarah Chen</p>
+            <p class="text-sm text-gray-400">Admin</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="flex-1 flex-col overflow-hidden">
+      
+      <!-- DESKTOP HEADER -->
+      <header class="bg-white border-b border-gray-200 px-12 py-6">
+        <div class="flex items-center justify-between">
+          <div>
+            <h2 class="text-3xl font-bold mb-1">Overview</h2>
+            <p class="text-gray-600">March 4, 2026 • Last updated 2 min ago</p>
+          </div>
+          
+          <div class="flex items-center gap-4">
+            <div class="relative">
+              <input 
+                type="text" 
+                placeholder="Search anything..."
+                class="w-80 pl-12 pr-4 py-3 rounded-xl border-gray-300 bg-gray-50 focus:bg-white focus:border-black focus:ring-2 focus:ring-black/10 outline-none transition"
+              >
+              <span class="absolute left-4 top-3.5 text-gray-400">🔍</span>
+            </div>
+            <button class="p-3 hover:bg-gray-100 rounded-xl relative">
+              <span class="text-xl">🔔</span>
+              <span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full"></span>
+            </button>
+            <div class="w-11 h-11 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">SC</div>
+          </div>
+        </div>
+      </header>
+
+      <!-- 12-COL GRID CONTENT -->
+      <main class="flex-1 overflow-y-auto p-12">
+        
+        <!-- KPI ROW - 4 cols -->
+        <div class="grid-cols-4 gap-8 mb-10">
+          
+          <div class="bg-white p-8 rounded-3xl border-gray-200 hover:shadow-lg transition">
+            <div class="flex items-start justify-between mb-6">
+              <div>
+                <p class="text-gray-600 mb-2">Total Revenue</p>
+                <p class="text-4xl font-bold">$1.2M</p>
+              </div>
+              <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center text-2xl">💰</div>
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+              <span class="text-green-600 font-medium">↑ 24.3%</span>
+              <span class="text-gray-500">vs last month</span>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-3xl border-gray-200 hover:shadow-lg transition">
+            <div class="flex items-start justify-between mb-6">
+              <div>
+                <p class="text-gray-600 mb-2">Active Users</p>
+                <p class="text-4xl font-bold">84,291</p>
+              </div>
+              <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl">👥</div>
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+              <span class="text-green-600 font-medium">↑ 18.7%</span>
+              <span class="text-gray-500">vs last month</span>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-3xl border-gray-200 hover:shadow-lg transition">
+            <div class="flex items-start justify-between mb-6">
+              <div>
+                <p class="text-gray-600 mb-2">Conversion Rate</p>
+                <p class="text-4xl font-bold">4.82%</p>
+              </div>
+              <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center text-2xl">📈</div>
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+              <span class="text-red-600 font-medium">↓ 1.2%</span>
+              <span class="text-gray-500">vs last month</span>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-3xl border-gray-200 hover:shadow-lg transition">
+            <div class="flex items-start justify-between mb-6">
+              <div>
+                <p class="text-gray-600 mb-2">Avg Response</p>
+                <p class="text-4xl font-bold">89ms</p>
+              </div>
+              <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center text-2xl">⚡</div>
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+              <span class="text-green-600 font-medium">↑ 32%</span>
+              <span class="text-gray-500">faster</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAIN GRID - 8 + 4 cols -->
+        <div class="grid-cols-12 gap-8 mb-10">
+          
+          <!-- LEFT: Large Chart - 8 cols -->
+          <div class="col-span-8">
+            <div class="bg-white rounded-3xl border-gray-200 p-10">
+              <div class="flex items-center justify-between mb-8">
+                <div>
+                  <h3 class="text-2xl font-bold mb-1">Revenue Analytics</h3>
+                  <p class="text-gray-600">Detailed breakdown by region and plan</p>
+                </div>
+                <div class="flex gap-2">
+                  <button class="px-5 py-2.5 rounded-xl bg-black text-white font-medium">7D</button>
+                  <button class="px-5 py-2.5 rounded-xl border-gray-300 hover:border-gray-400">30D</button>
+                  <button class="px-5 py-2.5 rounded-xl border-gray-300 hover:border-gray-400">90D</button>
+                  <button class="px-5 py-2.5 rounded-xl border-gray-300 hover:border-gray-400">1Y</button>
+                </div>
+              </div>
+              <div class="h-96 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl flex items-center justify-center">
+                <p class="text-gray-400 text-lg">Large Chart.js Area Chart Here</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Sidebar Widgets - 4 cols -->
+          <div class="col-span-4 space-y-8">
+            
+            <!-- Top Countries -->
+            <div class="bg-white rounded-3xl border-gray-200 p-8">
+              <h3 class="text-xl font-bold mb-6">Top Regions</h3>
+              <div class="space-y-5">
+                <div>
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="font-medium">United States</span>
+                    <span class="text-gray-600">$420,384</span>
+                  </div>
+                  <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                    <div class="h-full bg-blue-500 w-4/5"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="font-medium">India</span>
+                    <span class="text-gray-600">$298,192</span>
+                  </div>
+                  <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                    <div class="h-full bg-green-500 w-3/5"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="font-medium">UK</span>
+                    <span class="text-gray-600">$184,573</span>
+                  </div>
+                  <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                    <div class="h-full bg-purple-500 w-2/5"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="bg-white rounded-3xl border-gray-200 p-8">
+              <h3 class="text-xl font-bold mb-6">Live Activity</h3>
+              <div class="space-y-5 max-h-80 overflow-y-auto">
+                <div class="flex gap-4">
+                  <div class="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div class="flex-1">
+                    <p class="font-medium">New Pro subscription</p>
+                    <p class="text-sm text-gray-500">Mumbai, India • 2 min ago</p>
+                  </div>
+                  <span class="text-green-600 font-medium">+$29</span>
+                </div>
+                <div class="flex gap-4">
+                  <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div class="flex-1">
+                    <p class="font-medium">API request spike</p>
+                    <p class="text-sm text-gray-500">12,847 requests/min</p>
+                  </div>
+                </div>
+                <div class="flex gap-4">
+                  <div class="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div class="flex-1">
+                    <p class="font-medium">Enterprise upgrade</p>
+                    <p class="text-sm text-gray-500">San Francisco, US • 8 min ago</p>
+                  </div>
+                  <span class="text-green-600 font-medium">+$299</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WIDE TABLE - Full 12 cols -->
+        <div class="bg-white rounded-3xl border-gray-200 overflow-hidden">
+          <div class="p-10 border-b border-gray-200">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="text-2xl font-bold mb-1">Recent Transactions</h3>
+                <p class="text-gray-600">Last 50 transactions across all plans</p>
+              </div>
+              <button class="border-gray-300 px-6 py-3 rounded-xl hover:border-gray-400 font-medium">Export CSV</button>
+            </div>
+          </div>
+          
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead class="bg-gray-50 text-left text-sm font-medium text-gray-600">
+                <tr>
+                  <th class="px-10 py-5">Transaction ID</th>
+                  <th class="px-10 py-5">Customer</th>
+                  <th class="px-10 py-5">Plan</th>
+                  <th class="px-10 py-5">Amount</th>
+                  <th class="px-10 py-5">Status</th>
+                  <th class="px-10 py-5">Payment Method</th>
+                  <th class="px-10 py-5">Date</th>
+                  <th class="px-10 py-5">Actions</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr class="hover:bg-gray-50">
+                  <td class="px-10 py-6 font-mono text-sm text-gray-600">txn_1a2b3c</td>
+                  <td class="px-10 py-6">
+                    <div class="flex items-center gap-4">
+                      <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-medium">SC</div>
+                      <div>
+                        <p class="font-medium">Sarah Chen</p>
+                        <p class="text-sm text-gray-500">sarah@startupxyz.com</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-10 py-6">
+                    <span class="px-4 py-1.5 bg-purple-100 text-purple-800 text-sm font-medium rounded-full">Pro</span>
+                  </td>
+                  <td class="px-10 py-6 font-bold text-lg">$29.00</td>
+                  <td class="px-10 py-6">
+                    <span class="px-4 py-1.5 bg-green-100 text-green-800 text-sm font-medium rounded-full">Completed</span>
+                  </td>
+                  <td class="px-10 py-6 text-gray-600">Visa •••• 4242</td>
+                  <td class="px-10 py-6 text-gray-600">Mar 4, 2:34 PM</td>
+                  <td class="px-10 py-6">
+                    <button class="text-black hover:underline font-medium">View</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>
