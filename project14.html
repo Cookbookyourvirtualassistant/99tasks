@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - YourBrand</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- SIGNUP PAGE -->
+  <div class="min-h-screen grid-cols-1 lg:grid-cols-2">
+    
+    <!-- Left: Form -->
+    <div class="flex items-center justify-center px-6 py-12">
+      <div class="w-full max-w-md">
+        
+        <!-- Logo -->
+        <div class="mb-8">
+          <a href="/" class="font-bold text-2xl">YourBrand</a>
+        </div>
+
+        <!-- Header -->
+        <h1 class="text-3xl font-bold mb-2">Create your account</h1>
+        <p class="text-gray-600 mb-8">Start building in minutes. No credit card required.</p>
+
+        <!-- Social Signup -->
+        <div class="grid-cols-2 gap-4 mb-6">
+          <button class="flex items-center justify-center gap-2 border-gray-300 py-3 rounded-xl hover:border-gray-400 transition">
+            <span class="text-xl">G</span> Google
+          </button>
+          <button class="flex items-center justify-center gap-2 border-gray-300 py-3 rounded-xl hover:border-gray-400 transition">
+            <span class="text-xl">𝕏</span> GitHub
+          </button>
+        </div>
+
+        <!-- Divider -->
+        <div class="relative mb-6">
+          <div class="absolute inset-0 flex items-center">
+            <div class="w-full border-t border-gray-300"></div>
+          </div>
+          <div class="relative flex justify-center text-sm">
+            <span class="bg-gray-50 px-4 text-gray-500">Or sign up with email</span>
+          </div>
+        </div>
+
+        <!-- Signup Form -->
+        <form class="space-y-5">
+          
+          <!-- Name Row -->
+          <div class="grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium mb-2">First Name</label>
+              <input 
+                type="text" 
+                required
+                placeholder="John"
+                class="w-full px-4 py-3 rounded-xl border-gray-300 focus:border-black focus:ring-2 focus:ring-black/10 outline-none transition"
+              >
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2">Last Name</label>
+              <input 
+                type="text" 
+                required
+                placeholder="Doe"
+                class="w-full px-4 py-3 rounded-xl border-gray-300 focus:border-black focus:ring-2 focus:ring-black/10 outline-none transition"
+              >
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-2">Work Email</label>
+            <input 
+              type="email" 
+              required
+              placeholder="you@company.com"
+              class="w-full px-4 py-3 rounded-xl border-gray-300 focus:border-black focus:ring-2 focus:ring-black/10 outline-none transition"
+            >
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-2">Password</label>
+            <input 
+              type="password" 
+              required
+              minlength="8"
+              placeholder="Min 8 characters"
+              class="w-full px-4 py-3 rounded-xl border-gray-300 focus:border-black focus:ring-2 focus:ring-black/10 outline-none transition"
+            >
+            <p class="text-xs text-gray-500 mt-1">Must contain 8+ characters, 1 uppercase, 1 number</p>
+          </div>
+
+          <!-- Terms Checkbox -->
+          <div class="flex items-start gap-3">
+            <input 
+              type="checkbox" 
+              required
+              id="terms"
+              class="mt-1 w-4 h-4 rounded border-gray-300"
+            >
+            <label for="terms" class="text-sm text-gray-600">
+              I agree to the <a href="#terms" class="text-black underline">Terms of Service</a> and 
+              <a href="#privacy" class="text-black underline">Privacy Policy</a>
+            </label>
+          </div>
+
+          <!-- Submit -->
+          <button 
+            type="submit"
+            class="w-full bg-black text-white py-3 rounded-xl font-semibold hover:bg-gray-800 transition-all hover:shadow-lg"
+          >
+            Create Account
+          </button>
+        </form>
+
+        <!-- Login link -->
+        <p class="text-center text-sm text-gray-600 mt-8">
+          Already have an account? 
+          <a href="/login.html" class="text-black font-medium hover:underline">Sign in</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Right: Benefits -->
+    <div class="hidden lg:flex bg-gradient-to-br from-black via-gray-900 to-black items-center justify-center p-12 relative overflow-hidden">
+      <div class="absolute w-96 h-96 bg-white/5 rounded-full -top-48 -right-48"></div>
+      <div class="absolute w-96 h-96 bg-white/5 rounded-full -bottom-48 -left-48"></div>
+      
+      <div class="relative z-10 text-white max-w-md">
+        <h2 class="text-3xl font-bold mb-6">Why developers choose us</h2>
+        
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">⚡</div>
+            <div>
+              <h4 class="font-semibold mb-1">Ship in hours</h4>
+              <p class="text-sm text-gray-300">Auth, database, and hosting. One SDK, zero DevOps.</p>
+            </div>
+          </div>
+          
+          <div class="flex gap-4">
+            <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">🔒</div>
+            <div>
+              <h4 class="font-semibold mb-1">Enterprise security</h4>
+              <p class="text-sm text-gray-300">SOC2, GDPR, and end-to-end encryption included.</p>
+            </div>
+          </div>
+          
+          <div class="flex gap-4">
+            <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">📈</div>
+            <div>
+              <h4 class="font-semibold mb-1">Auto-scale</h4>
+              <p class="text-sm text-gray-300">From 0 to 10M users without changing a line of code.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial -->
+        <div class="mt-12 pt-8 border-t border-white/10">
+          <p class="text-gray-300 italic mb-4">
+            "We went from idea to 100K users in 3 weeks. This is the Firebase killer we needed."
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full"></div>
+            <div>
+              <p class="font-medium text-sm">Sarah Chen</p>
+              <p class="text-xs text-gray-400">CTO @ StartupXYZ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
