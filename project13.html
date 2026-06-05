@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - YourBrand</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- LOGIN PAGE -->
+  <div class="min-h-screen grid-cols-1 lg:grid-cols-2">
+    
+    <!-- Left: Form -->
+    <div class="flex items-center justify-center px-6 py-12">
+      <div class="w-full max-w-md">
+        
+        <!-- Logo -->
+        <div class="mb-8">
+          <a href="/" class="font-bold text-2xl">YourBrand</a>
+        </div>
+
+        <!-- Header -->
+        <h1 class="text-3xl font-bold mb-2">Welcome back</h1>
+        <p class="text-gray-600 mb-8">Sign in to your account to continue</p>
+
+        <!-- Social Login -->
+        <div class="grid-cols-2 gap-4 mb-6">
+          <button class="flex items-center justify-center gap-2 border-gray-300 py-3 rounded-xl hover:border-gray-400 transition">
+            <span class="text-xl">G</span> Google
+          </button>
+          <button class="flex items-center justify-center gap-2 border-gray-300 py-3 rounded-xl hover:border-gray-400 transition">
+            <span class="text-xl">𝕏</span> Twitter
+          </button>
+        </div>
+
+        <!-- Divider -->
+        <div class="relative mb-6">
+          <div class="absolute inset-0 flex items-center">
+            <div class="w-full border-t border-gray-300"></div>
+          </div>
+          <div class="relative flex justify-center text-sm">
+            <span class="bg-gray-50 px-4 text-gray-500">Or continue with email</span>
+          </div>
+        </div>
+
+        <!-- Login Form -->
+        <form class="space-y-5">
+          <div>
+            <label class="block text-sm font-medium mb-2">Email</label>
+            <input 
+              type="email" 
+              required
+              placeholder="you@company.com"
+              class="w-full px-4 py-3 rounded-xl border-gray-300 focus:border-black focus:ring-2 focus:ring-black/10 outline-none transition"
+            >
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label class="block text-sm font-medium">Password</label>
+              <a href="#forgot" class="text-sm text-black hover:underline">Forgot?</a>
+            </div>
+            <input 
+              type="password" 
+              required
+              placeholder="••••"
+              class="w-full px-4 py-3 rounded-xl border-gray-300 focus:border-black focus:ring-2 focus:ring-black/10 outline-none transition"
+            >
+          </div>
+
+          <!-- Remember me -->
+          <div class="flex items-center justify-between">
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" class="w-4 h-4 rounded border-gray-300">
+              <span class="text-sm text-gray-600">Remember me</span>
+            </label>
+          </div>
+
+          <!-- Submit -->
+          <button 
+            type="submit"
+            class="w-full bg-black text-white py-3 rounded-xl font-semibold hover:bg-gray-800 transition-all hover:shadow-lg"
+          >
+            Sign In
+          </button>
+        </form>
+
+        <!-- Sign up link -->
+        <p class="text-center text-sm text-gray-600 mt-8">
+          Don’t have an account? 
+          <a href="/signup.html" class="text-black font-medium hover:underline">Sign up</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Right: Visual/Illustration -->
+    <div class="hidden lg:flex bg-gradient-to-br from-black via-gray-900 to-black items-center justify-center p-12 relative overflow-hidden">
+      <!-- Decorative circles -->
+      <div class="absolute w-96 h-96 bg-white/5 rounded-full -top-48 -right-48"></div>
+      <div class="absolute w-96 h-96 bg-white/5 rounded-full -bottom-48 -left-48"></div>
+      
+      <div class="relative z-10 text-center text-white max-w-md">
+        <div class="text-6xl mb-8">🚀</div>
+        <h2 class="text-3xl font-bold mb-4">Ship faster than ever</h2>
+        <p class="text-gray-300 text-lg">
+          Join 10,000+ developers building the future with zero backend complexity.
+        </p>
+        
+        <!-- Stats -->
+        <div class="grid-cols-3 gap-6 mt-12 pt-12 border-t border-white/10">
+          <div>
+            <p class="text-2xl font-bold">99.99%</p>
+            <p class="text-sm text-gray-400">Uptime</p>
+          </div>
+          <div>
+            <p class="text-2xl font-bold">50ms</p>
+            <p class="text-sm text-gray-400">Latency</p>
+          </div>
+          <div>
+            <p class="text-2xl font-bold">24/7</p>
+            <p class="text-sm text-gray-400">Support</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
