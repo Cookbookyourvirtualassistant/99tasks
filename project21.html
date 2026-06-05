@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tablet Responsive</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-12 py-8 md:py-12">
+    
+    <!-- HEADER - Tablet optimized -->
+    <header class="mb-8 md:mb-12">
+      <div class="flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-2">Dashboard</h1>
+          <p class="text-gray-600 text-base md:text-lg">Welcome back, Sarah. Here's your overview.</p>
+        </div>
+        <div class="flex gap-3">
+          <button class="flex-1 md:flex-none border-gray-300 px-4 md:px-6 py-3 rounded-xl hover:border-gray-400">
+            Export
+          </button>
+          <button class="flex-1 md:flex-none bg-black text-white px-4 md:px-6 py-3 rounded-xl hover:bg-gray-800">
+            + New Project
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- STATS GRID - 2 cols on tablet, 4 on desktop -->
+    <div class="grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
+      
+      <div class="bg-white p-5 md:p-6 rounded-2xl border-gray-200">
+        <p class="text-sm text-gray-600 mb-2">Revenue</p>
+        <p class="text-2xl md:text-3xl font-bold">$24,580</p>
+        <p class="text-xs md:text-sm text-green-600 mt-2">↑ 12.5%</p>
+      </div>
+
+      <div class="bg-white p-5 md:p-6 rounded-2xl border-gray-200">
+        <p class="text-sm text-gray-600 mb-2">Users</p>
+        <p class="text-2xl md:text-3xl font-bold">8,492</p>
+        <p class="text-xs md:text-sm text-green-600 mt-2">↑ 8.2%</p>
+      </div>
+
+      <div class="bg-white p-5 md:p-6 rounded-2xl border-gray-200">
+        <p class="text-sm text-gray-600 mb-2">Conversion</p>
+        <p class="text-2xl md:text-3xl font-bold">3.24%</p>
+        <p class="text-xs md:text-sm text-red-600 mt-2">↓ 2.1%</p>
+      </div>
+
+      <div class="bg-white p-5 md:p-6 rounded-2xl border-gray-200">
+        <p class="text-sm text-gray-600 mb-2">Uptime</p>
+        <p class="text-2xl md:text-3xl font-bold">99.9%</p>
+        <p class="text-xs md:text-sm text-green-600 mt-2">↑ 0.1%</p>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT - Sidebar layout for tablet -->
+    <div class="grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8">
+      
+      <!-- Left: Main Chart - 8 cols on desktop, full on tablet -->
+      <div class="lg:col-span-8">
+        <div class="bg-white rounded-2xl border-gray-200 p-6 md:p-8">
+          <div class="flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+            <h3 class="text-lg md:text-xl font-bold">Revenue Trends</h3>
+            <div class="flex gap-2">
+              <button class="px-3 md:px-4 py-2 text-sm rounded-lg bg-black text-white">30D</button>
+              <button class="px-3 md:px-4 py-2 text-sm rounded-lg border-gray-300 hover:border-gray-400">90D</button>
+              <button class="px-3 md:px-4 py-2 text-sm rounded-lg border-gray-300 hover:border-gray-400">1Y</button>
+            </div>
+          </div>
+          <!-- Chart placeholder -->
+          <div class="h-64 md:h-80 bg-gradient-to-r from-blue-100 to-purple-100 rounded-xl flex items-center justify-center">
+            <p class="text-gray-400">Chart.js Line Chart Here</p>
+          </div>
+        </div>
+
+        <!-- Table - Tablet: show 4 cols, hide last on mobile -->
+        <div class="bg-white rounded-2xl border-gray-200 mt-6 md:mt-8 overflow-hidden">
+          <div class="p-6 border-b border-gray-200">
+            <h3 class="font-bold text-lg md:text-xl">Recent Activity</h3>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm md:text-base">
+              <thead class="bg-gray-50 text-left text-gray-600">
+                <tr>
+                  <th class="px-4 md:px-6 py-3 md:py-4">User</th>
+                  <th class="px-4 md:px-6 py-3 md:py-4">Plan</th>
+                  <th class="px-4 md:px-6 py-3 md:py-4">Amount</th>
+                  <th class="hidden md:table-cell px-6 py-4">Status</th>
+                  <th class="hidden lg:table-cell px-6 py-4">Date</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr>
+                  <td class="px-4 md:px-6 py-4">
+                    <div class="flex items-center gap-3">
+                      <div class="w-8 md:w-10 h-8 md:h-10 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm">SC</div>
+                      <span class="font-medium">Sarah Chen</span>
+                    </div>
+                  </td>
+                  <td class="px-4 md:px-6 py-4">Pro</td>
+                  <td class="px-4 md:px-6 py-4 font-medium">$29</td>
+                  <td class="hidden md:table-cell px-6 py-4">
+                    <span class="px-2 md:px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Paid</span>
+                  </td>
+                  <td class="hidden lg:table-cell px-6 py-4 text-gray-600">2 min ago</td>
+                </tr>
+                <tr>
+                  <td class="px-4 md:px-6 py-4">
+                    <div class="flex items-center gap-3">
+                      <div class="w-8 md:w-10 h-8 md:h-10 bg-purple-500 rounded-full flex items-center justify-center text-white text-sm">MK</div>
+                      <span class="font-medium">Marcus Kim</span>
+                    </div>
+                  </td>
+                  <td class="px-4 md:px-6 py-4">Enterprise</td>
+                  <td class="px-4 md:px-6 py-4 font-medium">$99</td>
+                  <td class="hidden md:table-cell px-6 py-4">
+                    <span class="px-2 md:px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Paid</span>
+                  </td>
+                  <td class="hidden lg:table-cell px-6 py-4 text-gray-600">1 hour ago</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Sidebar - 4 cols on desktop, full width stacked on tablet -->
+      <div class="lg:col-span-4 space-y-6 md:space-y-8">
+        
+        <!-- Quick Actions -->
+        <div class="bg-white rounded-2xl border-gray-200 p-6 md:p-8">
+          <h3 class="font-bold text-lg md:text-xl mb-4 md:mb-6">Quick Actions</h3>
+          <div class="grid-cols-2 gap-3 md:gap-4">
+            <button class="border-gray-300 p-4 md:p-5 rounded-xl hover:border-gray-400 text-center">
+              <div class="text-2xl mb-2">👥</div>
+              <p class="text-sm font-medium">Add User</p>
+            </button>
+            <button class="border-gray-300 p-4 md:p-5 rounded-xl hover:border-gray-400 text-center">
+              <div class="text-2xl mb-2">📄</div>
+              <p class="text-sm font-medium">Reports</p>
+            </button>
+            <button class="border-gray-300 p-4 md:p-5 rounded-xl hover:border-gray-400 text-center">
+              <div class="text-2xl mb-2">⚙️</div>
+              <p class="text-sm font-medium">Settings</p>
+            </button>
+            <button class="border-gray-300 p-4 md:p-5 rounded-xl hover:border-gray-400 text-center">
+              <div class="text-2xl mb-2">💬</div>
+              <p class="text-sm font-medium">Support</p>
+            </button>
+          </div>
+        </div>
+
+        <!-- Activity Feed -->
+        <div class="bg-white rounded-2xl border-gray-200 p-6 md:p-8">
+          <h3 class="font-bold text-lg md:text-xl mb-4 md:mb-6">Recent Activity</h3>
+          <div class="space-y-4 md:space-y-5">
+            <div class="flex gap-3">
+              <div class="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p class="text-sm font-medium">New signup from Mumbai</p>
+                <p class="text-xs text-gray-500">5 minutes ago</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p class="text-sm font-medium">Payment received $99</p>
+                <p class="text-xs text-gray-500">1 hour ago</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <div class="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p class="text-sm font-medium">API key created</p>
+                <p class="text-xs text-gray-500">3 hours ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
