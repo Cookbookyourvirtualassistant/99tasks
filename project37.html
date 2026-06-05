@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat Application UI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Inter,Segoe UI,sans-serif;
+}
+
+body{
+    background:#eef2f7;
+    height:100vh;
+}
+
+/* Layout */
+
+.chat-app{
+    display:flex;
+    height:100vh;
+}
+
+/* Sidebar */
+
+.sidebar{
+    width:320px;
+    background:#ffffff;
+    border-right:1px solid #e5e7eb;
+    display:flex;
+    flex-direction:column;
+}
+
+.sidebar-header{
+    padding:20px;
+    border-bottom:1px solid #eee;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:700;
+    color:#2563eb;
+}
+
+.search{
+    width:100%;
+    margin-top:15px;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    background:#f3f4f6;
+    outline:none;
+}
+
+.contact-list{
+    flex:1;
+    overflow-y:auto;
+}
+
+.contact{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:16px 20px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact:hover,
+.contact.active{
+    background:#eff6ff;
+}
+
+.avatar{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+}
+
+.contact-info h4{
+    font-size:15px;
+}
+
+.contact-info p{
+    color:#6b7280;
+    font-size:13px;
+    margin-top:4px;
+}
+
+/* Chat Area */
+
+.chat-area{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+}
+
+/* Header */
+
+.chat-header{
+    background:white;
+    padding:18px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid #eee;
+}
+
+.user{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.status{
+    color:#10b981;
+    font-size:13px;
+}
+
+/* Messages */
+
+.messages{
+    flex:1;
+    padding:25px;
+    overflow-y:auto;
+    background:#f8fafc;
+}
+
+.message{
+    max-width:70%;
+    padding:12px 16px;
+    border-radius:16px;
+    margin-bottom:15px;
+    line-height:1.5;
+}
+
+.received{
+    background:white;
+    border-top-left-radius:4px;
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+
+.sent{
+    background:#2563eb;
+    color:white;
+    margin-left:auto;
+    border-top-right-radius:4px;
+}
+
+/* Input */
+
+.chat-input{
+    background:white;
+    padding:15px 20px;
+    display:flex;
+    gap:10px;
+    border-top:1px solid #eee;
+}
+
+.chat-input input{
+    flex:1;
+    border:none;
+    padding:14px;
+    border-radius:12px;
+    background:#f3f4f6;
+    outline:none;
+}
+
+.send-btn{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:14px 22px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.send-btn:hover{
+    background:#1d4ed8;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.sidebar{
+    width:100px;
+}
+
+.contact-info,
+.logo,
+.search{
+    display:none;
+}
+
+.contact{
+    justify-content:center;
+}
+
+.message{
+    max-width:90%;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="chat-app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="sidebar-header">
+            <div class="logo">ChatFlow</div>
+            <input
+                type="text"
+                class="search"
+                placeholder="Search chats..."
+            >
+        </div>
+
+        <div class="contact-list">
+
+            <div class="contact active">
+                <div class="avatar"></div>
+                <div class="contact-info">
+                    <h4>Emma Wilson</h4>
+                    <p>Typing...</p>
+                </div>
+            </div>
+
+            <div class="contact">
+                <div class="avatar"></div>
+                <div class="contact-info">
+                    <h4>Alex Johnson</h4>
+                    <p>See you tomorrow!</p>
+                </div>
+            </div>
+
+            <div class="contact">
+                <div class="avatar"></div>
+                <div class="contact-info">
+                    <h4>Sarah Lee</h4>
+                    <p>Thanks for sharing.</p>
+                </div>
+            </div>
+
+            <div class="contact">
+                <div class="avatar"></div>
+                <div class="contact-info">
+                    <h4>Michael Brown</h4>
+                    <p>Let's discuss later.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </aside>
+
+    <!-- Chat Area -->
+    <main class="chat-area">
+
+        <div class="chat-header">
+
+            <div class="user">
+                <div class="avatar"></div>
+
+                <div>
+                    <h3>Emma Wilson</h3>
+                    <div class="status">● Online</div>
+                </div>
+            </div>
+
+            <div>📞 🎥 ⋮</div>
+
+        </div>
+
+        <div class="messages">
+
+            <div class="message received">
+                Hi! How's your project going?
+            </div>
+
+            <div class="message sent">
+                It's going great! I'm working on a new chat UI design.
+            </div>
+
+            <div class="message received">
+                Nice! Are you using HTML and CSS?
+            </div>
+
+            <div class="message sent">
+                Yes, a fully responsive layout with modern styling.
+            </div>
+
+            <div class="message received">
+                Sounds awesome 🚀
+            </div>
+
+        </div>
+
+        <div class="chat-input">
+
+            <input
+                type="text"
+                placeholder="Type a message..."
+            >
+
+            <button class="send-btn">
+                Send
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
