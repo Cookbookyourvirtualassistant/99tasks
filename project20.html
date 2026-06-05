@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- NAVBAR - Mobile + Desktop -->
+  <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Logo -->
+        <div class="flex items-center">
+          <span class="font-bold text-xl">YourBrand</span>
+        </div>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#" class="text-gray-700 hover:text-black">Features</a>
+          <a href="#" class="text-gray-700 hover:text-black">Pricing</a>
+          <a href="#" class="text-gray-700 hover:text-black">Docs</a>
+          <button class="bg-black text-white px-5 py-2 rounded-lg hover:bg-gray-800">Get Started</button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" class="md:hidden p-2">
+          <span class="text-2xl">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-gray-200 bg-white">
+      <div class="px-4 py-4 space-y-4">
+        <a href="#" class="block text-gray-700">Features</a>
+        <a href="#" class="block text-gray-700">Pricing</a>
+        <a href="#" class="block text-gray-700">Docs</a>
+        <button class="w-full bg-black text-white py-3 rounded-lg">Get Started</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="px-4 sm:px-6 lg:px-8 py-12 md:py-24">
+    <div class="max-w-7xl mx-auto grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      
+      <!-- Text -->
+      <div class="text-center lg:text-left">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          Build faster with <br class="hidden sm:block"> modern tools
+        </h1>
+        <p class="text-lg sm:text-xl text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">
+          Ship your next product in days, not months. Auth, database, hosting - all in one place.
+        </p>
+        <div class="flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <button class="bg-black text-white px-8 py-4 rounded-xl font-medium hover:bg-gray-800">Start Free</button>
+          <button class="border-gray-300 px-8 py-4 rounded-xl font-medium hover:border-gray-400">View Demo</button>
+        </div>
+      </div>
+
+      <!-- Image/Card -->
+      <div class="mt-12 lg:mt-0">
+        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+          <div class="h-48 sm:h-64 md:h-80 bg-gradient-to-br from-blue-400 to-purple-500 rounded-xl"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES GRID -->
+  <section class="px-4 sm:px-6 lg:px-8 py-12 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Everything you need</h2>
+      
+      <!-- 1 col mobile, 2 col tablet, 3 col desktop -->
+      <div class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        
+        <div class="bg-gray-50 p-6 md:p-8 rounded-2xl">
+          <div class="w-12 h-12 bg-black rounded-xl flex items-center justify-center text-white text-xl mb-4">⚡</div>
+          <h3 class="font-bold text-lg mb-2">Fast Performance</h3>
+          <p class="text-gray-600">Sub-100ms response times globally with edge deployment.</p>
+        </div>
+
+        <div class="bg-gray-50 p-6 md:p-8 rounded-2xl">
+          <div class="w-12 h-12 bg-black rounded-xl flex items-center justify-center text-white text-xl mb-4">🔒</div>
+          <h3 class="font-bold text-lg mb-2">Enterprise Security</h3>
+          <p class="text-gray-600">SOC2, GDPR, and end-to-end encryption built in.</p>
+        </div>
+
+        <div class="bg-gray-50 p-6 md:p-8 rounded-2xl sm:col-span-2 lg:col-span-1">
+          <div class="w-12 h-12 bg-black rounded-xl flex items-center justify-center text-white text-xl mb-4">📈</div>
+          <h3 class="font-bold text-lg mb-2">Auto Scale</h3>
+          <p class="text-gray-600">From 0 to millions of users without code changes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+    <div class="max-w-4xl mx-auto bg-black text-white rounded-3xl p-8 md:p-12 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to ship?</h2>
+      <p class="text-lg text-gray-300 mb-8">Start building in minutes. No credit card required.</p>
+      <button class="bg-white text-black px-8 py-4 rounded-xl font-medium hover:bg-gray-100">
+        Create Account
+      </button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white px-4 sm:px-6 lg:px-8 py-12">
+    <div class="max-w-7xl mx-auto grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="col-span-2 md:col-span-1">
+        <h3 class="font-bold text-lg mb-4">YourBrand</h3>
+        <p class="text-gray-400 text-sm">Build the future of the web.</p>
+      </div>
+      <div>
+        <h4 class="font-medium mb-4">Product</h4>
+        <div class="space-y-2 text-sm text-gray-400">
+          <a href="#" class="block hover:text-white">Features</a>
+          <a href="#" class="block hover:text-white">Pricing</a>
+          <a href="#" class="block hover:text-white">API</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-medium mb-4">Company</h4>
+        <div class="space-y-2 text-sm text-gray-400">
+          <a href="#" class="block hover:text-white">About</a>
+          <a href="#" class="block hover:text-white">Blog</a>
+          <a href="#" class="block hover:text-white">Careers</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-400">
+      © 2026 YourBrand. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menuBtn').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
