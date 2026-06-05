@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Cards</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body{
+        background:#f4f6f9;
+        padding:40px 20px;
+    }
+
+    .card-container{
+        display:grid;
+        grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+        gap:24px;
+        max-width:1200px;
+        margin:auto;
+    }
+
+    .card{
+        background:#fff;
+        border-radius:16px;
+        overflow:hidden;
+        box-shadow:0 4px 12px rgba(0,0,0,0.1);
+        transition:transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover{
+        transform:translateY(-6px);
+        box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .card img{
+        width:100%;
+        height:200px;
+        object-fit:cover;
+    }
+
+    .card-content{
+        padding:20px;
+    }
+
+    .card-title{
+        font-size:1.3rem;
+        margin-bottom:10px;
+        color:#333;
+    }
+
+    .card-text{
+        color:#666;
+        line-height:1.6;
+        margin-bottom:16px;
+    }
+
+    .btn{
+        display:inline-block;
+        text-decoration:none;
+        background:#2563eb;
+        color:#fff;
+        padding:10px 18px;
+        border-radius:8px;
+        transition:background 0.3s;
+    }
+
+    .btn:hover{
+        background:#1d4ed8;
+    }
+
+    @media (max-width: 480px){
+        .card img{
+            height:180px;
+        }
+
+        .card-title{
+            font-size:1.1rem;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="card-container">
+
+    <div class="card">
+        <img src="https://picsum.photos/400/300?random=1" alt="Card Image">
+        <div class="card-content">
+            <h3 class="card-title">Card Title 1</h3>
+            <p class="card-text">
+                This is a responsive card design that looks great on desktop, tablet, and mobile devices.
+            </p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/400/300?random=2" alt="Card Image">
+        <div class="card-content">
+            <h3 class="card-title">Card Title 2</h3>
+            <p class="card-text">
+                CSS Grid automatically adjusts the number of cards per row based on screen width.
+            </p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/400/300?random=3" alt="Card Image">
+        <div class="card-content">
+            <h3 class="card-title">Card Title 3</h3>
+            <p class="card-text">
+                Modern UI with hover effects, shadows, rounded corners, and smooth animations.
+            </p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
