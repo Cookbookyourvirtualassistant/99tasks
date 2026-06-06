@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mega Menu</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        nav{
+            background:#333;
+        }
+
+        .menu{
+            display:flex;
+            list-style:none;
+            justify-content:center;
+        }
+
+        .menu li{
+            position:relative;
+        }
+
+        .menu li a{
+            display:block;
+            padding:15px 20px;
+            color:white;
+            text-decoration:none;
+        }
+
+        .menu li:hover{
+            background:#444;
+        }
+
+        /* Mega Menu */
+        .mega-menu{
+            display:none;
+            position:absolute;
+            left:0;
+            top:100%;
+            width:700px;
+            background:white;
+            box-shadow:0 4px 10px rgba(0,0,0,0.2);
+            padding:20px;
+            z-index:100;
+        }
+
+        .dropdown:hover .mega-menu{
+            display:flex;
+        }
+
+        .column{
+            flex:1;
+            padding:10px;
+        }
+
+        .column h3{
+            margin-bottom:10px;
+            color:#333;
+        }
+
+        .column a{
+            display:block;
+            color:#555;
+            padding:5px 0;
+            text-decoration:none;
+        }
+
+        .column a:hover{
+            color:#007bff;
+        }
+
+        @media(max-width:768px){
+            .menu{
+                flex-direction:column;
+            }
+
+            .mega-menu{
+                position:static;
+                width:100%;
+                flex-direction:column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+
+        <li class="dropdown">
+            <a href="#">Services ▼</a>
+
+            <div class="mega-menu">
+                <div class="column">
+                    <h3>Web Design</h3>
+                    <a href="#">HTML</a>
+                    <a href="#">CSS</a>
+                    <a href="#">JavaScript</a>
+                </div>
+
+                <div class="column">
+                    <h3>Development</h3>
+                    <a href="#">PHP</a>
+                    <a href="#">Python</a>
+                    <a href="#">React</a>
+                </div>
+
+                <div class="column">
+                    <h3>Marketing</h3>
+                    <a href="#">SEO</a>
+                    <a href="#">Social Media</a>
+                    <a href="#">Email Marketing</a>
+                </div>
+            </div>
+        </li>
+
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+</body>
+</html>
