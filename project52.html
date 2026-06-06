@@ -1,0 +1,89 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glassmorphism UI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+}
+
+.glass-card{
+    width:350px;
+    padding:30px;
+    text-align:center;
+    border-radius:20px;
+    
+    /* Glass Effect */
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,0.2);
+    box-shadow:0 8px 32px rgba(0,0,0,0.2);
+    
+    color:#fff;
+}
+
+.glass-card h1{
+    margin-bottom:15px;
+}
+
+.glass-card p{
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+.btn{
+    padding:12px 24px;
+    border:none;
+    border-radius:30px;
+    background:rgba(255,255,255,0.2);
+    color:#fff;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:rgba(255,255,255,0.35);
+}
+</style>
+</head>
+<body>
+
+<div class="glass-card">
+    <h1>Glassmorphism UI</h1>
+    <p>
+        A modern frosted glass effect using HTML and CSS.
+    </p>
+    <button class="btn">Explore</button>
+</div>
+
+</body>
+</html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+</head>
+<body>
+  <h1>
+    Hello, World!
+  </h1>
+</body>
+</html>
