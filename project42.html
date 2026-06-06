@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notification Panel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .notification-panel {
+            width: 350px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        .panel-header {
+            background: #007bff;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .notification {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .notification:last-child {
+            border-bottom: none;
+        }
+
+        .notification h4 {
+            margin: 0;
+            color: #333;
+        }
+
+        .notification p {
+            margin: 5px 0 0;
+            color: #666;
+        }
+
+        .clear-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background: #dc3545;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .clear-btn:hover {
+            background: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="notification-panel">
+    <div class="panel-header">
+        Notifications
+    </div>
+
+    <div id="notifications">
+        <div class="notification">
+            <h4>New Message</h4>
+            <p>You have received a new message.</p>
+        </div>
+
+        <div class="notification">
+            <h4>System Update</h4>
+            <p>Your system update is available.</p>
+        </div>
+
+        <div class="notification">
+            <h4>Reminder</h4>
+            <p>Meeting starts in 30 minutes.</p>
+        </div>
+    </div>
+
+    <button class="clear-btn" onclick="clearNotifications()">
+        Clear All
+    </button>
+</div>
+
+<script>
+    function clearNotifications() {
+        document.getElementById("notifications").innerHTML = "";
+    }
+</script>
+
+</body>
+</html>
