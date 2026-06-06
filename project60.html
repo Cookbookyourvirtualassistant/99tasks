@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Icon Set</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.icon-container{
+    display:flex;
+    gap:30px;
+}
+
+.icon{
+    width:80px;
+    height:80px;
+    padding:15px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.icon:hover{
+    transform:translateY(-5px) scale(1.1);
+}
+
+svg{
+    width:100%;
+    height:100%;
+    fill:none;
+    stroke:#333;
+    stroke-width:2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+</style>
+</head>
+<body>
+
+<div class="icon-container">
+
+    <!-- Home Icon -->
+    <div class="icon">
+        <svg viewBox="0 0 24 24">
+            <path d="M3 10L12 3L21 10"></path>
+            <path d="M5 10V21H19V10"></path>
+        </svg>
+    </div>
+
+    <!-- Search Icon -->
+    <div class="icon">
+        <svg viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="16" y1="16" x2="21" y2="21"></line>
+        </svg>
+    </div>
+
+    <!-- User Icon -->
+    <div class="icon">
+        <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 21C4 17 8 15 12 15C16 15 20 17 20 21"></path>
+        </svg>
+    </div>
+
+    <!-- Settings Icon -->
+    <div class="icon">
+        <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15A1.65 1.65 0 0 0 20 13.5
+                     A1.65 1.65 0 0 0 19.4 12
+                     L18 11.2V9.8
+                     L19.4 9A1.65 1.65 0 0 0 20 7.5
+                     A1.65 1.65 0 0 0 19.4 6
+                     L18 5.2L16.8 4
+                     L16 2.6A1.65 1.65 0 0 0 14.5 2
+                     A1.65 1.65 0 0 0 13 2.6
+                     L12 4L11 2.6
+                     A1.65 1.65 0 0 0 9.5 2
+                     A1.65 1.65 0 0 0 8 2.6
+                     L7.2 4L6 5.2L4.6 6
+                     A1.65 1.65 0 0 0 4 7.5
+                     A1.65 1.65 0 0 0 4.6 9
+                     L6 9.8V11.2
+                     L4.6 12A1.65 1.65 0 0 0 4 13.5
+                     A1.65 1.65 0 0 0 4.6 15
+                     L6 15.8V17.2
+                     L4.6 18A1.65 1.65 0 0 0 4 19.5
+                     A1.65 1.65 0 0 0 4.6 21
+                     L6 21.8L7.2 23
+                     L8 21.4
+                     L9.5 22
+                     L11 21.4
+                     L12 20
+                     L13 21.4
+                     L14.5 22
+                     L16 21.4
+                     L16.8 23
+                     L18 21.8
+                     L19.4 21"></path>
+        </svg>
+    </div>
+
+</div>
+
+</body>
+</html>
