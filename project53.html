@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neumorphism UI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#e0e5ec;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.neumorphic-card{
+    width:350px;
+    padding:30px;
+    border-radius:20px;
+    background:#e0e5ec;
+    text-align:center;
+
+    /* Neumorphism Shadow */
+    box-shadow:
+        10px 10px 20px #b8bcc2,
+        -10px -10px 20px #ffffff;
+}
+
+.neumorphic-card h1{
+    color:#333;
+    margin-bottom:15px;
+}
+
+.neumorphic-card p{
+    color:#666;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+.neumorphic-btn{
+    padding:12px 25px;
+    border:none;
+    border-radius:12px;
+    background:#e0e5ec;
+    font-size:16px;
+    cursor:pointer;
+    color:#333;
+
+    box-shadow:
+        5px 5px 10px #b8bcc2,
+        -5px -5px 10px #ffffff;
+
+    transition:0.3s;
+}
+
+.neumorphic-btn:hover{
+    box-shadow:
+        inset 5px 5px 10px #b8bcc2,
+        inset -5px -5px 10px #ffffff;
+}
+</style>
+</head>
+<body>
+
+<div class="neumorphic-card">
+    <h1>Neumorphism UI</h1>
+    <p>
+        Soft UI design with subtle shadows and a modern neumorphic appearance.
+    </p>
+    <button class="neumorphic-btn">Click Me</button>
+</div>
+
+</body>
+</html>
