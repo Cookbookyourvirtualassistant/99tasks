@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Button Styles</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+/* Primary Button */
+.btn-primary{
+    background:#007bff;
+    color:white;
+    border:none;
+    padding:12px 24px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+/* Outline Button */
+.btn-outline{
+    background:transparent;
+    color:#007bff;
+    border:2px solid #007bff;
+    padding:12px 24px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+.btn-outline:hover{
+    background:#007bff;
+    color:white;
+}
+
+/* Gradient Button */
+.btn-gradient{
+    background:linear-gradient(45deg,#ff6b6b,#ff8e53);
+    color:white;
+    border:none;
+    padding:12px 24px;
+    border-radius:25px;
+    cursor:pointer;
+    transition:0.3s;
+}
+.btn-gradient:hover{
+    transform:scale(1.05);
+}
+
+/* Glass Button */
+.btn-glass{
+    background:rgba(255,255,255,0.2);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.3);
+    padding:12px 24px;
+    border-radius:25px;
+    cursor:pointer;
+}
+
+/* Neumorphism Button */
+.btn-neumorphic{
+    background:#e0e5ec;
+    border:none;
+    padding:12px 24px;
+    border-radius:12px;
+    box-shadow:
+        5px 5px 10px #b8bcc2,
+        -5px -5px 10px #ffffff;
+    cursor:pointer;
+}
+.btn-neumorphic:hover{
+    box-shadow:
+        inset 5px 5px 10px #b8bcc2,
+        inset -5px -5px 10px #ffffff;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <button class="btn-primary">Primary</button>
+    <button class="btn-outline">Outline</button>
+    <button class="btn-gradient">Gradient</button>
+    <button class="btn-glass">Glass</button>
+    <button class="btn-neumorphic">Neumorphic</button>
+</div>
+
+</body>
+</html>
