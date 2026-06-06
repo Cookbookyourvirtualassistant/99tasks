@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sidebar Menu</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    display:flex;
+    min-height:100vh;
+}
+
+.sidebar{
+    width:250px;
+    background:#2c3e50;
+    color:white;
+    height:100vh;
+    position:fixed;
+    left:0;
+    top:0;
+}
+
+.logo{
+    text-align:center;
+    padding:20px;
+    font-size:24px;
+    font-weight:bold;
+    background:#1a252f;
+}
+
+.menu{
+    list-style:none;
+    padding-top:20px;
+}
+
+.menu li{
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.menu li a{
+    display:block;
+    padding:15px 20px;
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.menu li a:hover{
+    background:#3498db;
+    padding-left:30px;
+}
+
+.content{
+    margin-left:250px;
+    padding:20px;
+    width:100%;
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+    <div class="logo">My App</div>
+
+    <ul class="menu">
+        <li><a href="#">🏠 Dashboard</a></li>
+        <li><a href="#">👤 Profile</a></li>
+        <li><a href="#">📊 Reports</a></li>
+        <li><a href="#">⚙ Settings</a></li>
+        <li><a href="#">📧 Messages</a></li>
+        <li><a href="#">🚪 Logout</a></li>
+    </ul>
+</div>
+
+<div class="content">
+    <h1>Welcome</h1>
+    <p>This is the main content area.</p>
+</div>
+
+</body>
+</html>
