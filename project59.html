@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SVG Illustration</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f4f7fc;
+}
+
+svg{
+    width:400px;
+    height:400px;
+}
+
+.sun{
+    animation:rotate 15s linear infinite;
+    transform-origin:center;
+}
+
+.cloud{
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes rotate{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+
+@keyframes float{
+    0%,100%{transform:translateX(0);}
+    50%{transform:translateX(20px);}
+}
+</style>
+</head>
+<body>
+
+<svg viewBox="0 0 400 400">
+
+    <!-- Sun -->
+    <g class="sun">
+        <circle cx="300" cy="80" r="40" fill="#FFD700"/>
+        <line x1="300" y1="15" x2="300" y2="0" stroke="#FFD700" stroke-width="4"/>
+        <line x1="300" y1="160" x2="300" y2="145" stroke="#FFD700" stroke-width="4"/>
+        <line x1="235" y1="80" x2="220" y2="80" stroke="#FFD700" stroke-width="4"/>
+        <line x1="380" y1="80" x2="365" y2="80" stroke="#FFD700" stroke-width="4"/>
+    </g>
+
+    <!-- Cloud -->
+    <g class="cloud">
+        <circle cx="120" cy="140" r="30" fill="#ffffff"/>
+        <circle cx="150" cy="120" r="35" fill="#ffffff"/>
+        <circle cx="190" cy="140" r="30" fill="#ffffff"/>
+        <rect x="120" y="140" width="70" height="30" fill="#ffffff"/>
+    </g>
+
+    <!-- House -->
+    <rect x="130" y="220" width="140" height="100" fill="#4CAF50"/>
+    <polygon points="120,220 200,150 280,220" fill="#E74C3C"/>
+
+    <!-- Door -->
+    <rect x="180" y="260" width="40" height="60" fill="#8B4513"/>
+
+    <!-- Windows -->
+    <rect x="
