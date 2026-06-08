@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram Story Design</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#111;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.story{
+    width:360px;
+    height:640px;
+    border-radius:25px;
+    overflow:hidden;
+    position:relative;
+    background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
+    color:white;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.story-progress{
+    position:absolute;
+    top:10px;
+    left:10px;
+    right:10px;
+    height:4px;
+    background:rgba(255,255,255,0.3);
+    border-radius:10px;
+}
+
+.story-progress span{
+    display:block;
+    width:70%;
+    height:100%;
+    background:white;
+    border-radius:10px;
+}
+
+.story-header{
+    display:flex;
+    align-items:center;
+    padding:25px 15px 15px;
+}
+
+.avatar{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    border:2px solid white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+    margin-right:10px;
+}
+
+.user-info h3{
+    font-size:15px;
+}
+
+.user-info p{
+    font-size:12px;
+    opacity:0.8;
+}
+
+.story-content{
+    height:75%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.story-content h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.story-content p{
+    font-size:18px;
+    max-width:280px;
+}
+
+.cta-btn{
+    margin-top:25px;
+    padding:12px 28px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#fd1d1d;
+    font-weight:bold;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.story-footer{
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    right:20px;
+    text-align:center;
+    font-size:14px;
+    opacity:0.9;
+}
+</style>
+</head>
+<body>
+
+<div class="story">
+
+    <div class="story-progress">
+        <span></span>
+    </div>
+
+    <div class="story-header">
+        <div class="avatar">C</div>
+        <div class="user-info">
+            <h3>Chandru</h3>
+            <p>Just now</p>
+        </div>
+    </div>
+
+    <div class="story-content">
+        <h1>🔥 BIG SALE</h1>
+        <p>Up to 50% OFF on all products. Limited time offer!</p>
+        <button class="cta-btn">Shop Now</button>
+    </div>
+
+    <div class="story-footer">
+        Swipe Up For More →
+    </div>
+
+</div>
+
+</body>
+</html>
