@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Card Design</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
+    background:#f4f6f9;
+    padding:30px;
+}
+
+.card{
+    width:350px;
+    height:200px;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Front Side */
+.front{
+    background:linear-gradient(135deg,#0f172a,#2563eb);
+    color:#fff;
+    position:relative;
+    padding:25px;
+}
+
+.logo{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#fff;
+    color:#2563eb;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.company{
+    margin-top:15px;
+    font-size:24px;
+    font-weight:700;
+}
+
+.tagline{
+    font-size:13px;
+    opacity:0.8;
+}
+
+.wave{
+    position:absolute;
+    bottom:-30px;
+    right:-30px;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.08);
+}
+
+/* Back Side */
+.back{
+    background:#fff;
+    padding:25px;
+    color:#333;
+    border:1px solid #ddd;
+}
+
+.name{
+    font-size:24px;
+    font-weight:700;
+    color:#2563eb;
+}
+
+.role{
+    color:#666;
+    margin-bottom:20px;
+}
+
+.info{
+    margin-bottom:8px;
+    font-size:14px;
+}
+
+.info span{
+    font-weight:600;
+    color:#111827;
+}
+
+.website{
+    margin-top:15px;
+    color:#2563eb;
+    font-weight:600;
+}
+
+@media(max-width:768px){
+    body{
+        flex-direction:column;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Front Side -->
+<div class="card front">
+    <div class="logo">C</div>
+
+    <div class="company">Creative Studio</div>
+    <div class="tagline">Design • Branding • Marketing</div>
+
+    <div class="wave"></div>
+</div>
+
+<!-- Back Side -->
+<div class="card back">
+    <div class="name">John Smith</div>
+    <div class="role">Graphic Designer</div>
+
+    <div class="info"><span>📞 Phone:</span> +91 98765 43210</div>
+    <div class="info"><span>✉ Email:</span> john@example.com</div>
+    <div class="info"><span>📍 Address:</span> Chennai, India</div>
+
+    <div class="website">www.creativestudio.com</div>
+</div>
+
+</body>
+</html>
