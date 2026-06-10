@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Poster</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#111827;
+    padding:20px;
+}
+
+.poster{
+    width:700px;
+    max-width:100%;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    border-radius:25px;
+    overflow:hidden;
+    color:white;
+    box-shadow:0 15px 40px rgba(0,0,0,0.3);
+}
+
+.header{
+    text-align:center;
+    padding:50px 30px 20px;
+}
+
+.logo{
+    width:90px;
+    height:90px;
+    margin:auto;
+    border-radius:50%;
+    background:white;
+    color:#2563eb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:36px;
+    font-weight:800;
+}
+
+.event-title{
+    font-size:3rem;
+    font-weight:800;
+    margin-top:20px;
+    text-transform:uppercase;
+}
+
+.subtitle{
+    font-size:1.2rem;
+    opacity:0.9;
+}
+
+.banner{
+    height:250px;
+    margin:30px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.15);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    font-weight:700;
+    border:2px dashed rgba(255,255,255,0.4);
+}
+
+.details{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    padding:0 30px 30px;
+}
+
+.card{
+    background:rgba(255,255,255,0.12);
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.card h3{
+    margin-bottom:8px;
+}
+
+.description{
+    padding:0 30px 30px;
+    text-align:center;
+    line-height:1.8;
+}
+
+.cta{
+    text-align:center;
+    padding-bottom:40px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:white;
+    color:#2563eb;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:700;
+}
+
+.footer{
+    background:rgba(0,0,0,0.2);
+    text-align:center;
+    padding:20px;
+}
+
+.footer p{
+    margin:5px 0;
+}
+
+@media(max-width:768px){
+    .event-title{
+        font-size:2rem;
+    }
+
+    .banner{
+        height:180px;
+        font-size:20px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="poster">
+
+    <div class="header">
+        <div class="logo">E</div>
+
+        <h1 class="event-title">Tech Conference 2026</h1>
+        <p class="subtitle">
+            Innovation • Networking • Future Technology
+        </p>
+    </div>
+
+    <div class="banner">
+        EVENT IMAGE / SPEAKER PHOTO
+    </div>
+
+    <div class="details">
+
+        <div class="card">
+            <h3>📅 Date</h3>
+            <p>25 July 2026</p>
+        </div>
+
+        <div class="card">
+            <h3>⏰ Time</h3>
+            <p>10:00 AM</p>
+        </div>
+
+        <div class="card">
+            <h3>📍 Venue</h3>
+            <p>Convention Center</p>
+        </div>
+
+    </div>
+
+    <div class="description">
+        Join industry experts, innovators, and entrepreneurs for a
+        day of inspiring talks, networking opportunities, and insights
+        into the latest technology trends shaping the future.
+    </div>
+
+    <div class="cta">
+        <a href="#" class="btn">Register Now</a>
+    </div>
+
+    <div class="footer">
+        <p>📞 +91 98765 43210</p>
+        <p>✉ info@event.com</p>
+        <p>🌐 www.event.com</p>
+    </div>
+
+</div>
+
+</body>
+</html>
