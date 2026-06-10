@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Educational Brochure</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#eef2f7;
+    padding:30px;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:30px;
+    color:#1e3a8a;
+}
+
+.brochure{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.panel{
+    background:#fff;
+    min-height:700px;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Cover Panel */
+.cover{
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+    color:white;
+    text-align:center;
+    padding:50px 25px;
+}
+
+.logo{
+    width:90px;
+    height:90px;
+    margin:auto;
+    border-radius:50%;
+    background:white;
+    color:#2563eb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:36px;
+    font-weight:800;
+}
+
+.cover h1{
+    margin-top:25px;
+    font-size:2.5rem;
+}
+
+.cover p{
+    margin-top:15px;
+    line-height:1.7;
+}
+
+/* Middle Panel */
+.content{
+    padding:30px;
+}
+
+.image-box{
+    height:200px;
+    background:linear-gradient(45deg,#dbeafe,#93c5fd);
+    border-radius:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#1e3a8a;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.section-title{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.course{
+    background:#f8fafc;
+    border-left:5px solid #2563eb;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:12px;
+}
+
+/* Third Panel */
+.info{
+    padding:30px;
+}
+
+.highlight{
+    background:#eff6ff;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:20px;
+}
+
+.highlight h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.contact{
+    background:#111827;
+    color:white;
+    padding:25px;
+    border-radius:12px;
+}
+
+.contact h3{
+    margin-bottom:15px;
+}
+
+.contact p{
+    margin:8px 0;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:30px;
+    font-weight:600;
+}
+
+@media(max-width:900px){
+    .brochure{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+<h1 class="title">Educational Brochure Template</h1>
+
+<div class="brochure">
+
+    <!-- Panel 1 -->
+    <div class="panel cover">
+
+        <div class="logo">E</div>
+
+        <h1>Excellence Academy</h1>
+
+        <p>
+            Empowering students with quality education,
+            innovative learning methods, and career-focused programs.
+        </p>
+
+    </div>
+
+    <!-- Panel 2 -->
+    <div class="panel content">
+
+        <div class="image-box">
+            Campus / Student Image
+        </div>
+
+        <h2 class="section-title">Courses Offered</h2>
+
+        <div class="course">
+            📘 Computer Science & IT
+        </div>
+
+        <div class="course">
+            📊 Business Administration
+        </div>
+
+        <div class="course">
+            🎨 Graphic & UI Design
+        </div>
+
+        <div class="course">
+            🔬 Science & Research
+        </div>
+
+        <div class="course">
+            🌐 Digital Marketing
+        </div>
+
+    </div>
+
+    <!-- Panel 3 -->
+    <div class="panel info">
+
+        <div class="highlight">
+            <h3>Why Choose Us?</h3>
+            <p>✔ Experienced Faculty</p>
+            <p>✔ Modern Infrastructure</p>
+            <p>✔ Placement Assistance</p>
+            <p>✔ Practical Learning</p>
+        </div>
+
+        <div class="highlight">
+            <h3>Admissions Open</h3>
+            <p>
+                Apply now for the upcoming academic year and
+                secure your place in a future-ready institution.
+            </p>
+        </div>
+
+        <div class="contact">
+            <h3>Contact Information</h3>
+
+            <p>📍 Chennai, India</p>
+            <p>📞 +91 98765 43210</p>
+            <p>✉ admissions@academy.com</p>
+            <p>🌐 www.academy.com</p>
+
+            <a href="#" class="btn">Apply Now</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
