@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voice Assistant UI</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
+}
+
+.voice-app{
+    width:380px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border-radius:30px;
+    padding:40px 25px;
+    text-align:center;
+    color:white;
+    box-shadow:0 15px 40px rgba(0,0,0,0.3);
+}
+
+.avatar{
+    width:140px;
+    height:140px;
+    margin:auto;
+    border-radius:50%;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:60px;
+    animation:pulse 2s infinite;
+}
+
+h1{
+    margin-top:25px;
+    font-size:28px;
+}
+
+.status{
+    margin-top:10px;
+    color:#cbd5e1;
+}
+
+/* Voice Waves */
+.wave-container{
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    gap:6px;
+    height:80px;
+    margin:35px 0;
+}
+
+.wave{
+    width:8px;
+    border-radius:10px;
+    background:#38bdf8;
+    animation:wave 1s infinite ease-in-out;
+}
+
+.wave:nth-child(1){height:25px;}
+.wave:nth-child(2){height:45px;animation-delay:.1s;}
+.wave:nth-child(3){height:70px;animation-delay:.2s;}
+.wave:nth-child(4){height:50px;animation-delay:.3s;}
+.wave:nth-child(5){height:30px;animation-delay:.4s;}
+
+@keyframes wave{
+    0%,100%{
+        transform:scaleY(0.5);
+    }
+    50%{
+        transform:scaleY(1.4);
+    }
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow:0 0 0 0 rgba(37,99,235,0.6);
+    }
+    70%{
+        box-shadow:0 0 0 30px rgba(37,99,235,0);
+    }
+    100%{
+        box-shadow:0 0 0 0 rgba(37,99,235,0);
+    }
+}
+
+.transcript{
+    background:rgba(255,255,255,0.1);
+    padding:15px;
+    border-radius:15px;
+    margin-bottom:25px;
+    color:#e2e8f0;
+}
+
+.controls{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.btn{
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:22px;
+    color:white;
+}
+
+.mic{
+    background:#2563eb;
+}
+
+.stop{
+    background:#ef4444;
+}
+
+.settings{
+    background:#10b981;
+}
+</style>
+</head>
+<body>
+
+<div class="voice-app">
+
+    <div class="avatar">
+        🎙️
+    </div>
+
+    <h1>Voice Assistant</h1>
+
+    <p class="status">
+        Listening...
+    </p>
+
+    <div class="wave-container">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+
+    <div class="transcript">
+        "What's the weather forecast for today?"
+    </div>
+
+    <div class="controls">
+        <button class="btn mic">🎤</button>
+        <button class="btn stop">⏹</button>
+        <button class="btn settings">⚙</button>
+    </div>
+
+</div>
+
+</body>
+</html>
