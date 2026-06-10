@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>App Icon Design</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f1f5f9;
+    flex-direction:column;
+    padding:20px;
+}
+
+h1{
+    margin-bottom:30px;
+    color:#1e293b;
+}
+
+/* App Icon */
+.app-icon{
+    width:220px;
+    height:220px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#2563eb,#7c3aed,#06b6d4);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    box-shadow:
+        0 20px 40px rgba(37,99,235,0.35),
+        inset 0 3px 10px rgba(255,255,255,0.2);
+}
+
+.app-icon::before{
+    content:"";
+    position:absolute;
+    width:160px;
+    height:160px;
+    border-radius:40px;
+    background:rgba(255,255,255,0.12);
+}
+
+.icon-letter{
+    position:relative;
+    font-size:90px;
+    font-weight:800;
+    color:white;
+    text-shadow:0 5px 10px rgba(0,0,0,0.2);
+}
+
+.icon-name{
+    margin-top:25px;
+    font-size:24px;
+    font-weight:700;
+    color:#2563eb;
+}
+
+.icon-description{
+    margin-top:10px;
+    color:#64748b;
+    text-align:center;
+    max-width:500px;
+}
+</style>
+</head>
+<body>
+
+<h1>Mobile App Icon Design</h1>
+
+<div class="app-icon">
+    <div class="icon-letter">A</div>
+</div>
+
+<div class="icon-name">
+    APP NAME
+</div>
+
+<div class="icon-description">
+    Modern gradient-based app icon with rounded corners,
+    suitable for Android, iOS, SaaS applications, startups,
+    productivity tools, and mobile platforms.
+</div>
+
+</body>
+</html>
