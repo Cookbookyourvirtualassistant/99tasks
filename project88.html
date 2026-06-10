@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile App Onboarding Screens</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f1f5f9;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    flex-wrap:wrap;
+    padding:20px;
+}
+
+.phone{
+    width:320px;
+    height:650px;
+    background:#fff;
+    border:10px solid #111827;
+    border-radius:35px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.screen{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px;
+}
+
+.icon{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:60px;
+    margin-bottom:30px;
+    color:#fff;
+}
+
+.screen1 .icon{
+    background:#2563eb;
+}
+
+.screen2 .icon{
+    background:#10b981;
+}
+
+.screen3 .icon{
+    background:#7c3aed;
+}
+
+h2{
+    margin-bottom:15px;
+    color:#111827;
+}
+
+p{
+    color:#64748b;
+    line-height:1.7;
+}
+
+.dots{
+    display:flex;
+    gap:8px;
+    margin-top:30px;
+}
+
+.dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:#cbd5e1;
+}
+
+.active{
+    background:#2563eb;
+}
+
+.btn{
+    margin-top:30px;
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:#2563eb;
+    color:#fff;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.btn-green{
+    background:#10b981;
+}
+
+.btn-purple{
+    background:#7c3aed;
+}
+</style>
+</head>
+<body>
+
+<!-- Screen 1 -->
+<div class="phone">
+    <div class="screen screen1">
+
+        <div class="icon">📱</div>
+
+        <h2>Welcome</h2>
+
+        <p>
+            Discover a seamless experience with our
+            modern and user-friendly mobile application.
+        </p>
+
+        <div class="dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+
+        <button class="btn">Next</button>
+
+    </div>
+</div>
+
+<!-- Screen 2 -->
+<div class="phone">
+    <div class="screen screen2">
+
+        <div class="icon">⚡</div>
+
+        <h2>Fast & Efficient</h2>
+
+        <p>
+            Complete tasks quickly with powerful
+            features designed to save your time.
+        </p>
+
+        <div class="dots">
+            <div class="dot"></div>
+            <div class="dot active"></div>
+            <div class="dot"></div>
+        </div>
+
+        <button class="btn btn-green">Next</button>
+
+    </div>
+</div>
+
+<!-- Screen 3 -->
+<div class="phone">
+    <div class="screen screen3">
+
+        <div class="icon">🚀</div>
+
+        <h2>Get Started</h2>
+
+        <p>
+            Create your account and start exploring
+            everything our platform has to offer.
+        </p>
+
+        <div class="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot active"></div>
+        </div>
+
+        <button class="btn btn-purple">
+            Start Now
+        </button>
+
+    </div>
+</div>
+
+</body>
+</html>
