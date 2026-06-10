@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Watch UI</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#0f172a;
+}
+
+/* Watch Frame */
+.watch{
+    width:320px;
+    height:380px;
+    background:#111827;
+    border:12px solid #374151;
+    border-radius:50px;
+    padding:15px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+.screen{
+    width:100%;
+    height:100%;
+    border-radius:35px;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+/* Time */
+.time{
+    text-align:center;
+}
+
+.time h1{
+    font-size:54px;
+    font-weight:700;
+    line-height:1;
+}
+
+.time p{
+    color:#94a3b8;
+    margin-top:5px;
+}
+
+/* Health Cards */
+.stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    border-radius:16px;
+    padding:12px;
+    text-align:center;
+}
+
+.card h3{
+    font-size:22px;
+    margin-top:5px;
+}
+
+.card span{
+    color:#94a3b8;
+    font-size:12px;
+}
+
+/* Bottom Navigation */
+.nav{
+    display:flex;
+    justify-content:space-around;
+    background:rgba(255,255,255,0.08);
+    padding:10px;
+    border-radius:18px;
+}
+
+.icon{
+    font-size:20px;
+    cursor:pointer;
+}
+
+.active{
+    color:#22d3ee;
+}
+</style>
+</head>
+<body>
+
+<div class="watch">
+
+    <div class="screen">
+
+        <!-- Clock -->
+        <div class="time">
+            <h1>10:45</h1>
+            <p>Wednesday, June 10</p>
+        </div>
+
+        <!-- Health Stats -->
+        <div class="stats">
+
+            <div class="card">
+                ❤️
+                <h3>78</h3>
+                <span>BPM</span>
+            </div>
+
+            <div class="card">
+                👣
+                <h3>8,542</h3>
+                <span>Steps</span>
+            </div>
+
+            <div class="card">
+                🔥
+                <h3>520</h3>
+                <span>Calories</span>
+            </div>
+
+            <div class="card">
+                🌙
+                <h3>7.8h</h3>
+                <span>Sleep</span>
+            </div>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav">
+            <div class="icon active">⌚</div>
+            <div class="icon">🏃</div>
+            <div class="icon">🎵</div>
+            <div class="icon">⚙️</div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
