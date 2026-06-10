@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logo Presentation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#333;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.hero{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-size:3rem;
+    color:#1e3a8a;
+}
+
+.hero p{
+    margin-top:10px;
+    color:#666;
+}
+
+.section{
+    background:#fff;
+    padding:30px;
+    margin-top:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.section h2{
+    margin-bottom:20px;
+    color:#1e3a8a;
+}
+
+.logo-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.logo-card{
+    border:1px solid #ddd;
+    border-radius:12px;
+    padding:20px;
+    text-align:center;
+}
+
+.logo{
+    width:140px;
+    height:140px;
+    margin:auto;
+    border-radius:50%;
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:42px;
+    font-weight:bold;
+}
+
+.dark-bg{
+    background:#111827;
+    padding:30px;
+    border-radius:12px;
+}
+
+.dark-bg .logo{
+    background:white;
+    color:#111827;
+}
+
+.color-palette{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.color{
+    flex:1;
+    min-width:150px;
+    height:120px;
+    border-radius:12px;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:600;
+}
+
+.blue{background:#2563EB;}
+.cyan{background:#06B6D4;}
+.dark{background:#111827;}
+.gray{
+    background:#E5E7EB;
+    color:#333;
+}
+
+.rules{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.rule{
+    padding:20px;
+    border-radius:12px;
+}
+
+.good{
+    background:#ecfdf5;
+    border-left:5px solid #10b981;
+}
+
+.bad{
+    background:#fef2f2;
+    border-left:5px solid #ef4444;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    margin-top:40px;
+    color:#666;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="hero">
+        <h1>Logo Presentation</h1>
+        <p>Brand Identity Showcase & Usage Guidelines</p>
+    </div>
+
+    <!-- Logo Variations -->
+    <div class="section">
+        <h2>Logo Variations</h2>
+
+        <div class="logo-grid">
+
+            <div class="logo-card">
+                <div class="logo">L</div>
+                <h3 style="margin-top:15px;">Primary Logo</h3>
+            </div>
+
+            <div class="logo-card">
+                <div class="dark-bg">
+                    <div class="logo">L</div>
+                </div>
+                <h3 style="margin-top:15px;">Dark Background</h3>
+            </div>
+
+            <div class="logo-card">
+                <div style="padding:20px;">
+                    <div style="
+                        width:140px;
+                        height:140px;
+                        border:5px solid #2563eb;
+                        border-radius:50%;
+                        margin:auto;
+                        display:flex;
+                        justify-content:center;
+                        align-items:center;
+                        font-size:42px;
+                        color:#2563eb;
+                        font-weight:bold;">
+                        L
+                    </div>
+                </div>
+                <h3 style="margin-top:15px;">Outline Version</h3>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Color Palette -->
+    <div class="section">
+        <h2>Brand Colors</h2>
+
+        <div class="color-palette">
+            <div class="color blue">#2563EB</div>
+            <div class="color cyan">#06B6D4</div>
+            <div class="color dark">#111827</div>
+            <div class="color gray">#E5E7EB</div>
+        </div>
+    </div>
+
+    <!-- Clear Space -->
+    <div class="section">
+        <h2>Logo Clear Space</h2>
+
+        <div style="
+            border:2px dashed #999;
+            width:250px;
+            height:250px;
+            margin:auto;
+            display:flex;
+            justify-content:center;
+            align-items:center;">
+            <div class="logo">L</div>
+        </div>
+
+        <p style="text-align:center;margin-top:15px;">
+            Maintain sufficient clear space around the logo.
+        </p>
+    </div>
+
+    <!-- Usage Rules -->
+    <div class="section">
+        <h2>Usage Guidelines</h2>
+
+        <div class="rules">
+
+            <div class="rule good">
+                <h3>✓ Correct Usage</h3>
+                <ul>
+                    <li>Maintain proportions</li>
+                    <li>Use approved colors</li>
+                    <li>Keep clear spacing</li>
+                    <li>Use high resolution files</li>
+                </ul>
+            </div>
+
+            <div class="rule bad">
+                <h3>✗ Incorrect Usage</h3>
+                <ul>
+                    <li>Do not stretch logo</li>
+                    <li>Do not rotate logo</li>
+                    <li>Do not change colors</li>
+                    <li>Do not add effects</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Logo Presentation Template
+</footer>
+
+</body>
+</html>
