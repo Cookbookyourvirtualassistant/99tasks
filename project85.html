@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adobe XD Style Prototype</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f3f4f6;
+    padding:30px;
+}
+
+.prototype{
+    max-width:1200px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    color:#2563eb;
+    margin-bottom:30px;
+}
+
+/* Device Frame */
+.mobile-frame{
+    width:360px;
+    height:740px;
+    margin:auto;
+    background:#fff;
+    border:12px solid #111827;
+    border-radius:35px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* Header */
+.header{
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    color:white;
+    padding:25px;
+}
+
+.header h2{
+    margin-top:10px;
+}
+
+/* Search */
+.search{
+    padding:15px;
+}
+
+.search input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:12px;
+}
+
+/* Cards */
+.cards{
+    padding:15px;
+}
+
+.card{
+    background:#f8fafc;
+    border-radius:15px;
+    padding:15px;
+    margin-bottom:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.05);
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.card h3{
+    margin:10px 0;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:10px;
+    background:#2563eb;
+    color:white;
+    padding:10px 18px;
+    border-radius:8px;
+    text-decoration:none;
+}
+
+/* Bottom Navigation */
+.navbar{
+    position:absolute;
+    bottom:0;
+    width:336px;
+    background:#fff;
+    border-top:1px solid #ddd;
+    display:flex;
+    justify-content:space-around;
+    padding:12px 0;
+}
+
+.nav-item{
+    text-align:center;
+    color:#64748b;
+    font-size:14px;
+}
+
+.active{
+    color:#2563eb;
+    font-weight:600;
+}
+</style>
+</head>
+<body>
+
+<div class="prototype">
+
+<h1 class="title">Adobe XD Mobile App Prototype</h1>
+
+<div class="mobile-frame">
+
+    <div class="header">
+        <h3>Welcome Back 👋</h3>
+        <h2>Dashboard</h2>
+    </div>
+
+    <div class="search">
+        <input type="text" placeholder="Search...">
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x150" alt="">
+            <h3>UI Design Course</h3>
+            <p>Learn modern UI/UX design principles.</p>
+            <a href="#" class="btn">View Details</a>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x150" alt="">
+            <h3>Web Development</h3>
+            <p>Master HTML, CSS & JavaScript.</p>
+            <a href="#" class="btn">Enroll Now</a>
+        </div>
+
+    </div>
+
+    <div class="navbar">
+        <div class="nav-item active">🏠 Home</div>
+        <div class="nav-item">🔍 Search</div>
+        <div class="nav-item">❤️ Favorites</div>
+        <div class="nav-item">👤 Profile</div>
+    </div>
+
+</div>
+
+</div>
+
+</body>
+</html>
