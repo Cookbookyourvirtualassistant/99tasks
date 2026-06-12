@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Production Ready Web Design Package</title>
+
+<style>
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --text:#475569;
+    --success:#10b981;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Inter, Arial, sans-serif;
+}
+
+body{
+    background:var(--light);
+    color:#111827;
+}
+
+header{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    color:#fff;
+    text-align:center;
+    padding:100px 20px;
+}
+
+header h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+header p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+    opacity:.9;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:#fff;
+    color:var(--primary);
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:600;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:2.2rem;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:var(--primary);
+}
+
+.process{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.step{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.step span{
+    display:inline-block;
+    width:50px;
+    height:50px;
+    line-height:50px;
+    border-radius:50%;
+    background:var(--primary);
+    color:white;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.pricing{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.price-card{
+    background:white;
+    border-radius:15px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.price-card.featured{
+    border:3px solid var(--primary);
+}
+
+.price{
+    font-size:2.5rem;
+    color:var(--primary);
+    margin:15px 0;
+}
+
+.price-card ul{
+    list-style:none;
+    text-align:left;
+    margin:20px 0;
+}
+
+.price-card li{
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+}
+
+.price-card li::before{
+    content:"✓ ";
+    color:var(--success);
+    font-weight:bold;
+}
+
+.testimonials{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.testimonial{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.cta{
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+    border-radius:20px;
+}
+
+footer{
+    background:var(--dark);
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Production Ready Web Design Package</h1>
+    <p>
+        Complete website design and development solutions for startups,
+        agencies, freelancers, and growing businesses.
+    </p>
+    <a href="#" class="btn">Get Proposal</a>
+</header>
+
+<section class="container">
+    <h2 class="section-title">What's Included</h2>
+
+    <div class="features">
+        <div class="card">
+            <h3>Custom UI/UX Design</h3>
+            <p>Modern, conversion-focused user interface design.</p>
+        </div>
+
+        <div class="card">
+            <h3>Responsive Layout</h3>
+            <p>Optimized for desktop, tablet, and mobile devices.</p>
+        </div>
+
+        <div class="card">
+            <h3>SEO Foundation</h3>
+            <p>Technical SEO structure and performance optimization.</p>
+        </div>
+
+        <div class="card">
+            <h3>Fast Performance</h3>
+            <p>Production-ready code with optimized assets.</p>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <h2 class="section-title">Development Process</h2>
+
+    <div class="process">
+        <div class="step">
+            <span>1</span>
+            <h3>Discovery</h3>
+            <p>Business goals and requirements gathering.</p>
+        </div>
+
+        <div class="step">
+            <span>2</span>
+            <h3>Design</h3>
+            <p>Wireframes and visual interface creation.</p>
+        </div>
+
+        <div class="step">
+            <span>3</span>
+            <h3>Development</h3>
+            <p>Frontend implementation and optimization.</p>
+        </div>
+
+        <div class="step">
+            <span>4</span>
+            <h3>Launch</h3>
+            <p>Testing, deployment, and support.</p>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <h2 class="section-title">Packages</h2>
+
+    <div class="pricing">
+
+        <div class="price-card">
+            <h3>Starter</h3>
+            <div class="price">$499</div>
+            <ul>
+                <li>5 Pages</li>
+                <li>Responsive Design</li>
+                <li>Basic SEO</li>
+                <li>Contact Form</li>
+            </ul>
+        </div>
+
+        <div class="price-card featured">
+            <h3>Professional</h3>
+            <div class="price">$999</div>
+            <ul>
+                <li>10+ Pages</li>
+                <li>Premium UI/UX</li>
+                <li>SEO Optimization</li>
+                <li>Analytics Setup</li>
+                <li>Priority Support</li>
+            </ul>
+        </div>
+
+        <div class="price-card">
+            <h3>Enterprise</h3>
+            <div class="price">$1999</div>
+            <ul>
+                <li>Unlimited Pages</li>
+                <li>Custom Features</li>
+                <li>Advanced SEO</li>
+                <li>Performance Audit</li>
+                <li>Dedicated Support</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section class="container">
+    <h2 class="section-title">Client Feedback</h2>
+
+    <div class="testimonials">
+        <div class="testimonial">
+            <p>"Excellent design quality and smooth communication."</p>
+            <strong>- Startup Founder</strong>
+        </div>
+
+        <div class="testimonial">
+            <p>"Delivered a modern website that increased conversions."</p>
+            <strong>- Business Owner</strong>
+        </div>
+
+        <div class="testimonial">
+            <p>"Fast delivery and production-ready code."</p>
+            <strong>- Marketing Agency</strong>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="cta">
+        <h2>Ready to Build Your Next Website?</h2>
+        <p style="margin-top:15px;">
+            Let's create a high-performing digital experience for your business.
+        </p>
+        <a href="#" class="btn">Book a Free Consultation</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Web Design Package. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
